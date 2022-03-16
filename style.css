@@ -5,3 +5,10 @@
   background-repeat: no-repeat;
   background-blend-mode: overlay;
 }
+
+.side-nav {
+  height: 100vh;
+  position: sticky;
+  top: 5vh;
+  
+}
