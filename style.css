@@ -6,9 +6,17 @@
   background-blend-mode: overlay;
 }
 
+
+
+/*** Side Navigation ***/
+
 .side-nav {
   height: 100vh;
   position: sticky;
   top: 5vh;
   
+}
+
+.side-nav li, ::after, ::before {
+  margin-bottom: 15px;
 }
