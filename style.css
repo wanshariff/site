@@ -6,6 +6,14 @@
   background-blend-mode: overlay;
 }
 
+/*** Body ***/
+
+body {
+  padding-bottom: 8vh;
+}
+
+/************/
+
 /*** Header ***/
 
 header {
@@ -14,6 +22,8 @@ header {
     background-color: #fff;
     z-index: 999;
 }
+
+/************/
 
 /*** Side Navigation ***/
 
@@ -27,3 +37,7 @@ header {
 .side-nav li, ::after, ::before {
   margin-bottom: 15px;
 }
+
+/************/
+
+
