@@ -6,14 +6,21 @@
   background-blend-mode: overlay;
 }
 
+/*** Header ***/
 
+header {
+  position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 999;
+}
 
 /*** Side Navigation ***/
 
 .side-nav {
-  height: 100vh;
+  height: 100%;
   position: sticky;
-  top: 5vh;
+  top: 100px;
   
 }
 
