@@ -25,6 +25,12 @@ header {
 
 /************/
 
+/*** About ***/
+
+.about .col-9 {
+  padding-bottom: 8vh;
+}
+
 /*** Side Navigation ***/
 
 .side-nav {
