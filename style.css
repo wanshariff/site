@@ -31,6 +31,12 @@ header {
   padding-bottom: 8vh;
 }
 
+.about .row {
+  padding-bottom: 5vh;
+}
+
+/************/
+
 /*** Side Navigation ***/
 
 .side-nav {
