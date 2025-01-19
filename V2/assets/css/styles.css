@@ -1,0 +1,545 @@
+html {
+    background-color: #fff;
+}
+
+body {
+  font-family: "nove", "input-mono", sans-serif;
+  line-height: 1.6;
+  color: #2b3b2a;
+  padding: 10px;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.main-content {
+  background-color: #2b3b2a;
+  border-radius: 8px;
+  height: 100%;
+  overflow: scroll;
+  padding: 12px;
+  position: relative; /* Ensures the gradient stays within the container */
+}
+
+.main-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 15%, rgba(0, 0, 0, 0) 75%);
+  mix-blend-mode: multiply; /* Apply the multiply blend mode */
+  pointer-events: none; /* Allow interactions with content */
+  z-index: 1; /* Ensure it overlays the background but stays below content */
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.main-content:hover::before {
+  opacity: 0.01; /* Subtle gradient overlay on hover */
+}
+
+
+.navbar {
+    z-index: 10;
+    top: 24px;
+    mix-blend-mode: difference; /* Dynamically invert based on background */
+  }
+  
+  .navbar-brand,
+  .nav-link {
+    color: rgb(255, 255, 255); /* Default color for light backgrounds */
+  }
+
+.navbar-nav .nav-link.active {
+    color: #a2b69f;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #f3f6f3;
+    mix-blend-mode: difference;
+    border-radius: 4px;
+    padding: 8px;
+  }
+
+h3, h4 {
+  font-family: "input-mono", sans-serif;
+  font-weight: 400;
+}
+
+p, li {
+    font-family: "input-mono", sans-serif;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 10px;
+  padding: 20px;
+  background-color: #405c3f;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Global spacing for cards in grids */
+.row > [class*='col-'] {
+    margin-bottom: 1rem; /* Adds spacing below all cards */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 500px;
+  height: 100%; /* Ensures all cards stretch to the same height */
+  background-size: cover;
+  background-position: center;
+  place-content: end;
+  border-radius: 24px;
+  overflow: hidden; /* Prevents the image from overflowing the card */
+  position: relative; /* Needed for positioning the pseudo-element */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  height: 100%; /* Ensures all cards stretch to the same height */
+  background-size: cover;
+  background-position: center;
+  place-content: end;
+  border-radius: 24px;
+  overflow: hidden; /* Prevents the image from overflowing the card */
+  position: relative; /* Needed for positioning the pseudo-element */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+.card::before, .card-gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: inherit;
+  background-position: inherit;
+  background-image: inherit; /* Inherit background properties */
+  transform: scale(1);
+  transition: transform 3s ease; /* Smooth zoom effect */
+  z-index: 0; /* Ensure it's below card content */
+}
+
+.card:hover, .card-gallery:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover::before, .card-gallery:hover::before {
+  transform: scale(1.1); /* Slight zoom for Ken Burns effect */
+}
+  
+  .card-body {
+    flex-grow: 1; /* Ensures the card body takes up the remaining space */
+    background-color: #324b31cc;
+    max-height: fit-content;
+    backdrop-filter: blur(4px);
+    border-radius: 16px;
+    border: solid 1px #405c3f;
+  }
+  .card-body-gallery {
+    background-image: linear-gradient(transparent 0%, rgb(41, 61, 40) 100%)!important;
+    backdrop-filter: blur(0px);
+    border-radius: 0!important;
+    height: 100%;
+    align-content: end;
+  }
+  
+  .row > [class*='col-'] {
+    margin-bottom: 1rem; /* Keeps the gap between cards consistent */
+  }
+
+  /* Portfolio details styling */
+  /* Ensure the hero section is full viewport height minus the navbar */
+  .hero-section {
+    height: calc(40vh);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .hero-section-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .hero-section .row {
+    color: white;
+  }
+
+  .hero-section h1 {
+    margin-bottom: 1rem;
+  }
+
+  .label {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    background-color: #334933;
+    font-family: "input-mono";
+    letter-spacing: 0.05rem;
+    color: #c8d4c6;
+    font-size: 12px;
+    border: solid 1px #405c3f;
+    border-radius: 4px;
+  }
+  
+  /* Footer Styling */
+  footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #131b13;
+    text-align: center;
+    color: #a2b69f;
+    border-radius: 4px;
+  }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background-color: #405c3f;
+  }
+
+  /* Hero animate text */
+  .codinfox-changing-keywords{
+    background-color: beige;
+    padding-left: 10px;
+    vertical-align:top;
+    overflow:hidden;
+    height:40px;
+    position:relative;
+    display: inline-block;
+      width: 40%;
+  }
+  .hidden{
+    position:absolute;
+    top: 20px;
+    display:inline-block;
+    width:250px;
+      opacity:0;
+    animation: slideme 12s infinite;
+  }
+  .hidden:nth-child(3){
+    animation-delay: 3s;
+  }
+  .hidden:nth-child(5){
+    animation-delay: 6s;
+  }
+  .hidden:nth-child(7){
+    animation-delay: 9s;
+  }
+  
+  @keyframes slideme {
+    0% {
+      top: 20px;
+      opacity:0;
+    }
+    5% {
+      top: 0px;
+      opacity:1;
+    }
+    10%{
+      top : 0;
+      opacity:1;
+    }
+    20%{
+      opacity:1;
+    }
+    25% {    
+    opacity:0.1;
+      top : 0;
+    }
+    30% {
+      opacity:0;
+      top: 20px;
+    }
+  }
+
+  .carousel-item iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .carousel-item:not(.active) iframe {
+    opacity: 0.5;
+    transition: opacity 0.5s ease-in-out;
+  }
+  .carousel-control-prev,
+    .carousel-control-next {
+      position: static;
+      color: #000;
+      background-color: transparent;
+      border: none;
+      font-size: 1.5rem;
+    }
+
+    .carousel-indicator {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .video-details {
+      margin-top: 20px;
+    }
+
+    .video-details h4 {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .video-details ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .video-details ul li {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+/* Lightbox Overlay */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* 80% opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 5%;
+}
+
+/* Lightbox Content Layout */
+.lightbox-content {
+  display: flex;
+  width: 90%;
+  height: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Full-size Image Section */
+.lightbox-image-container {
+  flex: 2;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#lightbox-image {
+  width: 100%; /* Maintain aspect ratio */
+  height: 100%; /* Fit container height */
+  display: block;
+  object-fit: contain; /* Maintain aspect ratio */
+  position: relative;
+}
+
+/* Zoomed-in Image */
+.lightbox-image-container.zoomed {
+  cursor: grab;
+  overflow: scroll; /* Allow panning via scrollbars */
+}
+
+.lightbox-image-container.zoomed #lightbox-image {
+  transform: scale(2)!important; /* Zoom in the full image */
+  top: 0;
+}
+
+/* Right-side Details Section */
+.lightbox-details {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Image Title */
+#lightbox-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Tags List */
+#lightbox-tags {
+  list-style-type: none;
+  padding: 0;
+}
+
+#lightbox-tags li {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  font-size: 0.9rem;
+}
+
+/* Zoom Indicator */
+.zoom-indicator {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  z-index: 10;
+  display: none; /* Hidden by default */
+}
+
+.lightbox-image-container.zoomed .zoom-indicator {
+  display: block; /* Show indicator when zoomed */
+}
+
+
+/* Full-size Image Section */
+.lightbox-image-container {
+  flex: 2;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+#lightbox-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom on Click */
+.lightbox-image-container.zoomed #lightbox-image {
+  transform: scale(3.5); /* Zoom effect */
+  cursor: zoom-out;
+}
+
+/* Right-side Details Section */
+.lightbox-details {
+  flex: 1;
+  padding: 20px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* Close Icon */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Image Title */
+#lightbox-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Tags List */
+#lightbox-tags {
+  list-style-type: none;
+  padding: 0;
+}
+
+#lightbox-tags li {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 5px 5px 0 0;
+  font-size: 0.9rem;
+}
+
+/* Zoom Icon and Text Overlay */
+.zoom-overlay {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+}
+
+.zoom-overlay .zoom-icon {
+  font-size: 1.2rem;
+}
+
+.zoom-overlay .zoom-text {
+  font-size: 0.9rem;
+}
+
+/* Lightbox Image Zoom */
+
+
+.lightbox-image-container {
+  position: relative;
+  flex: 2;
+  height: 100%;
+  overflow: hidden;
+  cursor: zoom-in; /* Indicate zoom functionality */
+}
+
+.lightbox-image-container.zoomed {
+  cursor: grab;
+  overflow: scroll; /* Enable panning */
+}
+
+#lightbox-image {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center;
+  max-height: 100%; /* Ensure image fits container */
+  max-width: 100%;
+}

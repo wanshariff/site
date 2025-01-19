@@ -1,0 +1,197 @@
+/* Custom Styles for Generic Content Styles Page */
+
+/* General Body Styling */
+body {
+    font-family: "nove", "input-mono", sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .main-content {
+    background-color: #233123;
+  }
+  
+  /* Header Styling */
+  header {
+    background-color: #131b13;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  header p {
+    font-size: 1.25rem;
+  }
+  
+  /* Section Styling */
+  section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #2b3b2a;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #f3f6f3;
+    padding-bottom: 5px;
+  }
+  
+  /* Paragraph Styling */
+  p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  p.lead {
+    font-size: 1.25rem;
+    font-weight: medium;
+    color: #c8d4c6;
+  }
+  
+  /* Text Styles */
+  .text-muted {
+    color: #6c757d !important;
+  }
+  .text-primary {
+    color: #007bff !important;
+  }
+  .text-success {
+    color: #28a745 !important;
+  }
+  .text-danger {
+    color: #dc3545 !important;
+  }
+  .text-warning {
+    color: #ffc107 !important;
+  }
+  .text-info {
+    color: #17a2b8 !important;
+  }
+  .text-dark {
+    color: #131b13 !important;
+  }
+  .text-white {
+    color: #fff !important;
+  }
+  .text-black-50 {
+    color: rgba(0, 0, 0, 0.5) !important;
+  }
+  .text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+  
+  /* Inline Text Elements */
+  mark {
+    background-color: #ffc107;
+    padding: 0.2em;
+  }
+  del {
+    text-decoration: line-through;
+  }
+  ins {
+    text-decoration: underline;
+    color: #28a745;
+  }
+  u {
+    text-decoration: underline;
+  }
+  small {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
+  
+  /* List Styling */
+  ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  li {
+    font-family:"input-mono", sans-serif;
+  }
+  ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+  }
+  dl {
+    margin-bottom: 20px;
+  }
+  dl dt {
+    font-weight: bold;
+    color: #a2b69f;
+  }
+  dl dd {
+    margin-left: 20px;
+    color: #f3f6f3;
+    font-family:"input-mono", sans-serif;
+  }
+  
+  /* Table Styling */
+  .table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+  .table th, .table td {
+    font-family:"input-mono", sans-serif;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #a2b69f;
+    background-color: #c8d4c6;
+  }
+  .table th {
+    background-color: #567554;
+    color: #fff;
+  }
+  
+  /* Form Styling */
+  form {
+    margin-top: 20px;
+    font-family:"input-mono", sans-serif;
+  }
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  .form-check-label {
+    margin-left: 5px;
+  }
+  button {
+    background-color: #567554!important;
+    color: #fff;
+    border: none!important;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #334933!important;
+  }
+  
+  /* Footer Styling */
+  footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #131b13;
+    text-align: center;
+    color: #a2b69f;
+    border-radius: 4px;
+  }
+  
