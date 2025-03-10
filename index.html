@@ -1,17 +1,19 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Portfolio | Wan Shariff</title>
+  <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/yfr0hqd.css">
-
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- SEO -->
+  <meta name="description" content="Wan Shariff - Product Designer specializing in UI/UX design, branding, and digital experiences">
+</head>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top dynamic-navbar px-4">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html"><h3>Wan Shariff</h3></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,9 +21,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="index.html" style="font-size: 18px; letter-spacing: 3px;">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html" style="font-size: 18px; letter-spacing: 3px;">PORTFOLIO</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html" style="font-size: 18px; letter-spacing: 3px;">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
         </ul>
       </div>
     </div>
@@ -97,41 +99,66 @@
       <h2 class="text-center mb-4">Design Shots</h2>
       <div class="row">
         <div class="col-md-3 mb-3">
-          <div class="card p-3 text-light" style="background-image: url(assets/images/img-01.jpg);">
-            <div class="card-body p-4">
-              <h4 class="card-title">Youthopia</h4>
-              <span class="label me-2 mb-2">Logo Design</span>
-              <span class="label me-2 mb-2">Brand Guideline</span>
+          <a href="assets/images/youthopia-thumb.jpg" class="lightbox-trigger" data-title="Youthopia" data-tags="Logo Design,Brand Guideline">
+            <div class="card-gallery text-light" style="background-image: url(assets/images/youthopia-thumb.jpg);">
+              <div class="card-body-gallery p-4">
+                <h4 class="card-title">Youthopia</h4>
+                <span class="label me-2 mb-2">Logo Design</span>
+                <span class="label me-2 mb-2">Brand Guideline</span>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="card p-3 text-light" style="background-image: url(assets/images/img-01.jpg);">
-            <div class="card-body p-4">
-              <h4 class="card-title">Raisuri Football Club</h4>
-              <span class="label me-2 mb-2">Logo Redesign</span>
+          <a href="assets/images/raisuri-thumb.jpg" class="lightbox-trigger" data-title="Raisuri Football Club" data-tags="Logo Redesign">
+            <div class="card-gallery text-light" style="background-image: url(assets/images/raisuri-thumb.jpg);">
+              <div class="card-body-gallery p-4">
+                <h4 class="card-title">Raisuri Football Club</h4>
+                <span class="label me-2 mb-2">Logo Redesign</span>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="card p-3 text-light" style="background-image: url(assets/images/img-01.jpg);">
-            <div class="card-body p-4">
-              <h4 class="card-title">UNITAR</h4>
-              <span class="label me-2 mb-2">Brand Revamp</span>
+          <a href="assets/images/unitar-thumb.jpg" class="lightbox-trigger" data-title="UNITAR" data-tags="Brand Revamp">
+            <div class="card-gallery text-light" style="background-image: url(assets/images/unitar-thumb.jpg);">
+              <div class="card-body-gallery p-4">
+                <h4 class="card-title">UNITAR</h4>
+                <span class="label me-2 mb-2">Brand Revamp</span>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-3 mb-3">
-          <div class="card p-3 text-light" style="background-image: url(assets/images/justified-thumb-img.jpg);">
-            <div class="card-body p-4">
-              <h4 class="card-title">Justified Juice Bar</h4>
-              <span class="label me-2 mb-2">Logo Design</span>
+          <a href="assets/images/justified-thumb-img.jpg" class="lightbox-trigger" data-title="Justified Juice Bar" data-tags="Logo Design">
+            <div class="card-gallery text-light" style="background-image: url(assets/images/justified-thumb-img.jpg);">
+              <div class="card-body-gallery p-4">
+                <h4 class="card-title">Justified Juice Bar</h4>
+                <span class="label me-2 mb-2">Logo Design</span>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </main>
 
+    <!-- Add the lightbox container if it's not already in your index.html -->
+    <div id="lightbox" class="lightbox-overlay" style="display: none;">
+      <div class="lightbox-content">
+        <div class="lightbox-image-container">
+          <img id="lightbox-image" src="" alt="Lightbox Image">
+          <div class="zoom-overlay">
+            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <span class="zoom-text">Click on image to zoom in for details</span>
+          </div>
+        </div>
+        <div class="lightbox-details">
+          <span class="close-icon">&times;</span>
+          <h4 id="lightbox-title"></h4>
+          <ul id="lightbox-tags"></ul>
+        </div>
+      </div>
+    </div>
 
       <!-- Contact Me Section -->
       <main class="my-2 text-light p-4" id="contact">
