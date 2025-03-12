@@ -172,3 +172,96 @@ function initVideoCarousel() {
     }
   });
 }
+
+// Enhanced Sidebar Navigation Script
+function initSidebarNav() {
+  const sections = document.querySelectorAll("[id]");
+  const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+  
+  if (!sections.length || !navLinks.length) return;
+  
+  // Function to set active state based on scroll position
+  function setActiveNavItem() {
+    // Get current scroll position
+    const scrollY = window.pageYOffset;
+    
+    // Find the current section
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120; // Offset for navbar + padding
+      const sectionId = current.getAttribute("id");
+      
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        // Set active class on the corresponding nav link
+        navLinks.forEach(link => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + sectionId) {
+            link.classList.add("active");
+          }
+        });
+      }
+    });
+    
+    // If we're at the top of the page before any sections, activate first item
+    if (scrollY < 150) {
+      navLinks.forEach(link => link.classList.remove("active"));
+      navLinks[0].classList.add("active");
+    }
+    
+    // If we're at the bottom of the page, activate last item
+    if ((window.innerHeight + scrollY) >= document.body.offsetHeight - 50) {
+      navLinks.forEach(link => link.classList.remove("active"));
+      navLinks[navLinks.length - 1].classList.add("active");
+    }
+  }
+  
+  // Add scroll event listener
+  window.addEventListener("scroll", setActiveNavItem);
+  
+  // Set up smooth scrolling for sidebar links
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      if (targetSection) {
+        // Scroll to section with offset for header
+        window.scrollTo({
+          top: targetSection.offsetTop - 100,
+          behavior: 'smooth'
+        });
+        
+        // Update URL hash without scrolling
+        history.pushState(null, null, targetId);
+        
+        // Set active class
+        navLinks.forEach(link => link.classList.remove("active"));
+        this.classList.add("active");
+      }
+    });
+  });
+  
+  // Check hash on page load and scroll to section if needed
+  if (window.location.hash) {
+    const targetSection = document.querySelector(window.location.hash);
+    if (targetSection) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: targetSection.offsetTop - 100,
+          behavior: 'smooth'
+        });
+      }, 300);
+    }
+  }
+  
+  // Initial check for active section
+  setActiveNavItem();
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+  if (document.querySelector('.sidebar-nav')) {
+    initSidebarNav();
+  }
+});

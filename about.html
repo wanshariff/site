@@ -3,276 +3,479 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me</title>
+  <title>About Me | Wan Shariff</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/yfr0hqd.css">
+  <!-- SEO -->
+  <meta name="description" content="Wan Shariff - Product Designer specializing in UI/UX design, branding, and digital experiences">
+  <!-- Added consistent sidebar styles -->
+  <style>
+    
+  </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top dynamic-navbar px-4">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><h3>Wan Shariff</h3></a>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container px-4">
+      <!-- Logo/name on left side (unchanged) -->
+      <a class="navbar-brand" href="index.html"><h4 style="margin: 0!important;">Wan Shariff</h4></a>
+      
+      <!-- Mobile toggle button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+      <!-- Navbar content with centered menu and right button -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html" style="font-size: 18px; letter-spacing: 3px;">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html" style="font-size: 18px; letter-spacing: 3px;">PORTFOLIO</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html" style="font-size: 18px; letter-spacing: 3px;">ABOUT</a></li>
+        <!-- Center-aligned navigation -->
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
         </ul>
+        
+        <!-- Contact button on right side -->
+        <div class="ms">
+          <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <div class="main-content container-fluid p-3">
-
-    <!-- Page Header -->
-    <section class="hero-section position-relative text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto; mix-blend-mode: luminosity;">
-      
-      <div class="hero-section-content container">
-        <div class="row">
-          <h1 class="text-light">About</h1>
-        </div>
+  <div class="main-content container-fluid p-2">
+    <!-- Hero Section -->
+    <section class="hero-section text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto;">
+      <div class="hero-section-content container px-4">
         <div class="row">
           <div class="col-md-8">
-            <p class="mb-3">Learn more about my journey, skills, and experiences.</p>
+            <h1 class="text-light">About</h1>
+            <p class="lead text-light">Learn more about my journey, skills, and experiences.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="container my-5 text-light">
+    <!-- Content with Sidebar -->
+    <div class="container my-4 text-light">
       <div class="row">
         <!-- Sidebar -->
-        <aside class="col-md-3 mb-4">
-          <nav class="sticky-top" style="top: 80px;"> <!-- Adjust top offset -->
-            <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link text-light" href="#personal-information">Personal Information</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="#background-overview">Background Overview</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="#skills-competency">Skills & Competency</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="#work-experience">Work Experience</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="#education">Education</a></li>
-              <li class="nav-item"><a class="nav-link text-light" href="#certifications">Additional Certifications</a></li>
-            </ul>
-          </nav>
-        </aside>
-        <!-- Content Section -->
-        <section class="col-md-9 p-4">
-          <!-- Personal Information -->
-          <div id="personal-information" class="mb-5">
-            <h2>Personal Information</h2>
-            <p><strong>Full name:</strong> Syazwan Iylia bin Shariff</p>
-            <p><strong>Email:</strong> syazwanshariff@gmail.com</p>
-            <p><strong>Location:</strong> Shah Alam, Malaysia</p>
+        <aside class="col-md-3">
+          <div class="sidebar-container sticky-top" style="top: 64px;">
+            <nav class="sidebar-nav">
+              <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="#personal-information">Personal Information</a></li>
+                <li class="nav-item"><a class="nav-link" href="#background-overview">Background Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills-competency">Skills & Competency</a></li>
+                <li class="nav-item"><a class="nav-link" href="#work-experience">Work Experience</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="#certifications">Additional Certifications</a></li>
+              </ul>
+            </nav>
           </div>
+        </aside>
+        
+        <!-- Content Section -->
+        <section class="col-md-9 p-5">
+          <!-- Personal Information -->
+          <div id="personal-information">
+            <h2>PERSONAL INFORMATION</h2>
+            <table>
+              <tbody>
+                <tr>
+                  <th><p class="m-0">Full name:</p></th>
+                  <td><p class="m-0">Syazwan Iylia bin Shariff</p></td>
+                </tr>
+                <tr>
+                  <th><p class="m-0">Email:</p></th>
+                  <td><p class="m-0">syazwanshariff@gmail.com</p></td>
+                </tr>
+                <tr>
+                  <th><p class="m-0">Based in:</p></th>
+                  <td><p class="m-0">Shah Alam, Selangor, Malaysia</p></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr>
 
           <!-- Background Overview -->
-          <div id="background-overview" class="mb-5">
-            <h2>Background Overview</h2>
-            <p>Curious and passionate Product Designer with 12+ years of experience dedicated to crafting solutions
-              that make a genuine impact on people’s lives. I believe design should be more than functional; it should
-              connect emotionally, solve real problems, and be meaningful at every touchpoint.
-              I have a deep love for leading and nurturing design teams and fostering an environment built on
-              empathy, collaboration, and growth. My approach blends simplicity with intention—every design choice
-              serves a purpose, adding value without unnecessary complexity. I strive to create products that
-              empower users while contributing positively to the teams I lead and the world around me.</p>
-            </div>
+          <div id="background-overview">
+            <h2>BACKGROUND OVERVIEW</h2>
+            <p>Product Designer with 12+ years of experience driving business impact through user-centered design. Led design initiatives resulting in 29% business growth at AirAsia MOVE, while building scalable design systems and mentoring teams. Proven track record of translating complex requirements into intuitive solutions across finance, travel, and government sectors.</p>
+          </div>
+          <hr>
 
           <!-- Skills & Competency -->
-          <div id="skills-competency" class="mb-5">
-            <h2>Skills & Competency</h2>
-            <ul>
-              <li>UI/UX Design</li>
-              <li>Branding & Visual Identity</li>
-              <li>Motion Graphics</li>
-              <li>HTML, CSS, JavaScript</li>
-              <li>Product Roadmapping</li>
-            </ul>
+          <div id="skills-competency">
+            <h2>SKILLS & COMPETENCY</h2>
+            <div class="my-4">
+              <h4>Streategic Design</h4>
+              <span class="label me-2 mb-2">Product Strategy</span>
+              <span class="label me-2 mb-2">Design System</span>
+              <span class="label me-2 mb-2">User Research</span>
+              <span class="label me-2 mb-2">User Testing</span>
+              <span class="label me-2 mb-2">Information Architecture</span>
+              <span class="label me-2 mb-2">Design Thinking Workshop</span>
+            </div>
+            <div class="my-4">
+              <h4>Tools & Technology</h4>
+                <span class="label me-2 mb-2">Figma</span>
+                <span class="label me-2 mb-2">Adobe Creative Suite</span>
+                <span class="label me-2 mb-2">Framer</span>
+                <span class="label me-2 mb-2">Webflow</span>
+                <span class="label me-2 mb-2">WordPress</span>
+                <span class="label me-2 mb-2">OutSystems</span>
+                <span class="label me-2 mb-2">Joomla</span>
+            </div>
+            <div class="my-4">
+              <h4>Product Management</h4>
+                <span class="label me-2 mb-2">Data Analytics</span>
+                <span class="label me-2 mb-2">Performance Tracking</span>
+                <span class="label me-2 mb-2">Stakeholder Management</span>
+                <span class="label me-2 mb-2">Cross-functional Collaboration</span>
+                <span class="label me-2 mb-2">Design Documentation</span>
+                <span class="label me-2 mb-2">Knowledge Transfer & Training</span>
+              </div>
           </div>
+          <hr>
 
           <!-- Work Experience -->
           <div id="work-experience" class="mb-5">
-            <h2>Work Experience</h2>
-            <div class="mb-3">
-              <h5>Senior Product Designer</h5>
-              <p><strong>AirAsia MOVE</strong> | July 2022 - December 2024</p>
+            <h2>WORK EXPERIENCE</h2>
+            
+            <div class="timeline">
+              <!-- AirAsia MOVE -->
+              <div class="timeline-container">
+                <div class="timeline-date"><span class="label">07/22 - 12/24</span></div>
+                <div class="timeline-content">
+                  <h5>Senior Product Designer</h5>
+                  <h6>AirAsia MOVE</h6>
+                  <p><ul>
+                    <li>
+                        Led the Stays product design team, including a product writer and UX researcher, while working closely with Product, Development, and Business teams to align objectives and deliver impactful solutions.
+                    </li>
+                    <li>
+                      Conducted monthly performance reviews and competitor analysis to inform design strategies. Facilitated rapid user testing sessions with internal employees to refine designs based on actionable feedback.
+                    </li>
+                    <li>
+                      Enhanced the MOVE V6 Design System for UI consistency across multiple Lines of Business (LOBs) and championed knowledge sharing within the team to foster best practices and efficiency in product design.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- MDEC -->
+              <div class="timeline-container">
+                <div class="timeline-date"><span class="label">08/21 - 07/22</span></div>
+                <div class="timeline-content">
+                  <h5>Senior UI/UX Designer</h5>
+                  <h6>MDEC</h6>
+                  <ul>
+                    <li>
+                      Designed and developed corporate microsites using WordPress Elementor, adhering to MDEC's design guidelines to accelerate timelines and improve efficiency.
+                    </li>
+                    <li>
+                      Led UX design and front-end development of a unified platform for Malaysian SMEs, simplifying access to programs and grants while enhancing user experiences.
+                    </li>
+                    <li>
+                      Quickly adopted OutSystems to streamline design and development processes, reducing prototyping and implementation timelines to ensure timely project delivery.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- EY Advisory -->
+              <div class="timeline-container">
+                <div class="timeline-date"><span class="label">11/19 - 07/21</span></div>
+                <div class="timeline-content">
+                  <h5>Senior Experience Design Consultant</h5>
+                  <h6>EY Advisory</h6>
+                  <ul>
+                    <li>
+                      Partnered with clients in utility, finance, and government sectors to deliver user-focused mobile apps and web platforms, aligning with user needs and business objectives.
+                    </li>
+                    <li>
+                      Conducted design thinking workshops with senior management, leveraging user research insights to shape discussions and develop high-fidelity wireframes and prototypes for stakeholder alignment.
+                    </li>
+                    <li>
+                      Mentored associate consultants in agile project teams, fostering a culture of collaboration and skills development to achieve successful, high-quality project outcomes.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- Havas -->
+              <div class="timeline-container">
+                <div class="timeline-date"><span class="label">01/19 - 07/19</span></div>
+                <div class="timeline-content">
+                  <h5>Senior Digital Designer</h5>
+                  <h6>Havas Immerse, CCube</h6>
+                  <ul>
+                    <li>
+                      Managed the design and execution of digital content for multiple Unilever brands, driving consistent growth and a strong market presence across platforms.
+                    </li>
+                    <li>
+                      Created and adapted social media campaigns for Facebook, YouTube Ads, Instagram Stories, and Carousels, while developing e-commerce campaigns to boost product sales and online presence.
+                    </li>
+                    <li>
+                      Edited and optimized video commercials for social media, tailoring content for platform-specific impact, and handled a diverse brand portfolio, ensuring alignment with client goals and audience needs.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- 9 Lives Digital -->
+              <div class="timeline-container">
+                <div class="timeline-date"><span class="label">02/18 - 12/18</span></div>
+                <div class="timeline-content">
+                  <h5>Digital Art Director</h5>
+                  <h6>9 Lives Digital</h6>
+                  <ul>
+                    <li>
+                      Led a design team to deliver digital rebranding projects and develop responsive websites and mobile applications, enhancing client brand experiences.
+                    </li>
+                    <li>
+                      Spearheaded cross-channel marketing campaigns to boost client engagement, improve brand visibility, and drive enhanced customer interactions.
+                    </li>
+                    <li>
+                      Ensured cohesive messaging and visual storytelling across channels, optimizing client engagement and contributing to increased user acquisition and brand loyalty.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+          <!-- IPG MEdiabrands -->
+          <div class="timeline-container">
+            <div class="timeline-date"><span class="label">03/16 - 02/18</span></div>
+            <div class="timeline-content">
+              <h5>Senior Digital Designer -> Art Director, Digital</h5>
+              <h6>Ansible, IPG Mediabrands</h6>
               <ul>
                 <li>
-                  Led the Stays product design team, including a product writer and UX researcher, while working closely with Product, Development, and Business teams to align objectives and deliver impactful solutions.
+                  Conceptualized and executed on-brand and strategic digital solutions for responsive web and mobile applications, ensuring alignment with client business objectives and creative briefs.
                 </li>
                 <li>
-                  Conducted monthly performance reviews and competitor analysis to inform design strategies. Facilitated rapid user testing sessions with internal employees to refine designs based on actionable feedback.
+                  Led and guided designers to bring creative concepts to life, ensuring high-quality execution of design projects from start to finish.
                 </li>
                 <li>
-                  Enhanced the MOVE V6 Design System for UI consistency across multiple Lines of Business (LOBs) and championed knowledge sharing within the team to foster best practices and efficiency in product design.
+                  Managed a broad range of creative outputs, from responsive web design to mobile design, while ensuring consistency across brand identity and visual assets.
                 </li>
               </ul>
-              <span class="label me-2 mb-2">Team leadership</span>
-              <span class="label me-2 mb-2">Cross-functional collaboration</span>
-              <span class="label me-2 mb-2">Competitor analysis</span>
-              <span class="label me-2 mb-2">Design system management</span>
-              <span class="label me-2 mb-2">User testing</span>
-              <span class="label me-2 mb-2">Product enhancements</span>
-              <span class="label me-2 mb-2">Knowledge sharing</span>
             </div>
-            <div class="divider"></div>
-            <div class="mb-3">
-              <h5>Senior UI/UX Designer</h5>
-              <p><strong>MDEC</strong> | August 2021 - July 2022</p>
-              <ul>
-                <li>
-                  Designed and developed corporate microsites using WordPress Elementor, adhering to MDEC’s design guidelines to accelerate timelines and improve efficiency.
-                </li>
-                <li>
-                  Led UX design and front-end development of a unified platform for Malaysian SMEs, simplifying access to programs and grants while enhancing user experiences.
-                </li>
-                <li>
-                  Quickly adopted OutSystems to streamline design and development processes, reducing prototyping and implementation timelines to ensure timely project delivery.
-                </li>
-              </ul>
-              <span class="label me-2 mb-2">Microsite design</span>
-              <span class="label me-2 mb-2">WordPress Elementor</span>
-              <span class="label me-2 mb-2">Design guideline compliance</span>
-              <span class="label me-2 mb-2">UX design</span>
-              <span class="label me-2 mb-2">Front-end development</span>
-              <span class="label me-2 mb-2">SME support platform</span>
-              <span class="label me-2 mb-2">OutSystems</span>
-            </div>
-            <div class="mb-3">
-              <h5>Senior Experience Design Consultant</h5>
-              <p><strong>EY Advisory</strong> | November 2019 - July 2021</p>
-              <ul>
-                <li>
-                  Partnered with clients in utility, finance, and government sectors to deliver user-focused mobile apps and web platforms, aligning with user needs and business objectives.
-                </li>
-                <li>
-                  Conducted design thinking workshops with senior management, leveraging user research insights to shape discussions and develop high-fidelity wireframes and prototypes for stakeholder alignment.
-                </li>
-                <li>
-                  Mentored associate consultants in agile project teams, fostering a culture of collaboration and skills development to achieve successful, high-quality project outcomes.
-                </li>
-              </ul>
-              <span class="label me-2 mb-2">User-centric design</span>
-              <span class="label me-2 mb-2">Mobile app development</span>
-              <span class="label me-2 mb-2">Web platform design</span>
-              <span class="label me-2 mb-2">Design thinking workshops</span>
-              <span class="label me-2 mb-2">Stakeholder alignment</span>
-              <span class="label me-2 mb-2">User research</span>
-              <span class="label me-2 mb-2">High-fidelity wireframes</span>
-              <span class="label me-2 mb-2">Interactive prototypes</span>
-              <span class="label me-2 mb-2">Agile collaboration</span>
-            </div>
-            <div class="mb-3">
-              <h5>Senior Digital Designer</h5>
-              <p><strong>Havas</strong> | January 2019 - July 2019</p>
-              <ul>
-                <li>
-                  Managed the design and execution of digital content for multiple Unilever brands, driving consistent growth and a strong market presence across platforms.
-                </li>
-                <li>
-                  Created and adapted social media campaigns for Facebook, YouTube Ads, Instagram Stories, and Carousels, while developing e-commerce campaigns to boost product sales and online presence.
-                </li>
-                <li>
-                  Edited and optimized video commercials for social media, tailoring content for platform-specific impact, and handled a diverse brand portfolio, ensuring alignment with client goals and audience needs.
-                </li>
-              </ul>
-              <span class="label me-2 mb-2">Digital content design</span>
-              <span class="label me-2 mb-2">Social media campaigns</span>
-              <span class="label me-2 mb-2">Facebook, YouTube Ads, Instagram Stories</span>
-              <span class="label me-2 mb-2">Carousel content</span>
-              <span class="label me-2 mb-2">E-commerce campaigns</span>
-              <span class="label me-2 mb-2">Product sales</span>
-              <span class="label me-2 mb-2">Video editing</span>
-              <span class="label me-2 mb-2">Brand portfolio management</span>
-              <span class="label me-2 mb-2">Client and audience alignment</span>
-            </div>
-            <div class="mb-3">
-              <h5>Digital Art Director</h5>
-              <p><strong>9 Lives Digital</strong> | February 2018 - December 2018</p>
-              <ul>
-                <li>
-                  Led a design team to deliver digital rebranding projects and develop responsive websites and mobile applications, enhancing client brand experiences.
-                </li>
-                <li>
-                  Spearheaded cross-channel marketing campaigns to boost client engagement, improve brand visibility, and drive enhanced customer interactions
-                </li>
-                <li>
-                  Ensured cohesive messaging and visual storytelling across channels, optimizing client engagement and contributing to increased user acquisition and brand loyalty.
-                </li>
-              </ul>
-              <span class="label me-2 mb-2">Design team leadership</span>
-              <span class="label me-2 mb-2">Digital rebranding</span>
-              <span class="label me-2 mb-2">Responsive website development</span>
-              <span class="label me-2 mb-2">Integrated marketing campaigns</span>
-              <span class="label me-2 mb-2">Brand visibility</span>
-              <span class="label me-2 mb-2">Cross-channel campaigns</span>
-              <span class="label me-2 mb-2">Visual storytelling</span>
-              <span class="label me-2 mb-2">User acquisition</span>
-              <span class="label me-2 mb-2">Brand loyalty</span>
-            </div>
-            <div class="mb-3">
-              <h5>Digital Art Director</h5>
-              <p><strong>9 Lives Digital</strong> | February 2018 - December 2018</p>
-              <ul>
-                <li>
-                  Led a design team to deliver digital rebranding projects and develop responsive websites and mobile applications, enhancing client brand experiences.
-                </li>
-                <li>
-                  Spearheaded cross-channel marketing campaigns to boost client engagement, improve brand visibility, and drive enhanced customer interactions
-                </li>
-                <li>
-                  Ensured cohesive messaging and visual storytelling across channels, optimizing client engagement and contributing to increased user acquisition and brand loyalty.
-                </li>
-              </ul>
-              <span class="label me-2 mb-2">Design team leadership</span>
-              <span class="label me-2 mb-2">Digital rebranding</span>
-              <span class="label me-2 mb-2">Responsive website development</span>
-              <span class="label me-2 mb-2">Integrated marketing campaigns</span>
-              <span class="label me-2 mb-2">Brand visibility</span>
-              <span class="label me-2 mb-2">Cross-channel campaigns</span>
-              <span class="label me-2 mb-2">Visual storytelling</span>
-              <span class="label me-2 mb-2">User acquisition</span>
-              <span class="label me-2 mb-2">Brand loyalty</span>
-            </div>
-            <!-- Add more experiences as needed -->
           </div>
+        </div>
+      </div>
+          <hr>
 
           <!-- Education -->
-          <div id="education" class="mb-5">
-            <h2>Education</h2>
+          <div id="education">
+            <h2>EDUCATION</h2>
             <div class="mb-3">
               <h5>Diploma in Graphic Design</h5>
               <p><strong>Institution Name</strong> | Graduation Year</p>
               <p>Brief details about the program, any notable accomplishments, or specializations.</p>
             </div>
-            <!-- Add more educational qualifications as needed -->
           </div>
+          <hr>
 
           <!-- Additional Certifications -->
-          <div id="certifications" class="mb-5">
-            <h2>Additional Certifications</h2>
+          <div id="certifications">
+            <h2>ADDITIONAL CERTIFICATIONS</h2>
             <ul>
               <li>Certification Name | Institution | Year</li>
               <li>Certification Name | Institution | Year</li>
-              <!-- Add more certifications as needed -->
             </ul>
           </div>
         </section>
       </div>
-    </main>
-
+    </div>
+    
     <!-- Footer -->
-    <footer class="py-3">
+    <footer>
       <div class="container text-center">
         <p class="mb-0">&copy; 2025 Wan Shariff. All rights reserved.</p>
       </div>
     </footer>
+  </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <!-- Added the same interactive sidebar navigation script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all section elements that have IDs
+      const sections = document.querySelectorAll('div[id]');
+      // Get all sidebar navigation links
+      const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+      
+      // Function to find the section currently in view
+      function highlightNavItem() {
+        const scrollPosition = window.scrollY;
+        
+        // Check each section's position
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 120;
+          const sectionHeight = section.offsetHeight;
+          const sectionId = section.getAttribute('id');
+          
+          // If the current scroll position is within this section
+          if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            // Remove active class from all links
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+            });
+            
+            // Add active class to the current section's link
+            const activeLink = document.querySelector(`.sidebar-nav .nav-link[href="#${sectionId}"]`);
+            if (activeLink) {
+              activeLink.classList.add('active');
+            }
+          }
+        });
+        
+        // If we're at the bottom of the page, activate the last nav item
+        if ((window.innerHeight + scrollPosition) >= document.body.offsetHeight - 100) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          navLinks[navLinks.length - 1].classList.add('active');
+        }
+      }
+      
+      // Update active state on scroll
+      window.addEventListener('scroll', highlightNavItem);
+      
+      // Handle click events for smooth scrolling
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          
+          if (targetElement) {
+            // Smooth scroll to target
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+            
+            // Update active state immediately
+            navLinks.forEach(navLink => navLink.classList.remove('active'));
+            this.classList.add('active');
+          }
+        });
+      });
+      
+      // Initialize active state
+      highlightNavItem();
+    });
+  </script>
+  <script>
+  // Wait for the document to be fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all section elements that have IDs
+    const sections = document.querySelectorAll('section[id], div[id]');
+    // Get all sidebar navigation links
+    const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+    
+    if (sections.length === 0 || navLinks.length === 0) {
+      console.error('Sections or navigation links not found');
+      return;
+    }
+    
+    // Create an array to store section positions
+    const sectionPositions = Array.from(sections).map(section => {
+      return {
+        id: section.id,
+        top: section.offsetTop - 120, // Adjust offset as needed
+        bottom: section.offsetTop + section.offsetHeight - 120
+      };
+    });
+    
+    // Function to find the section currently in view
+    function getCurrentSection() {
+      const scrollPosition = window.scrollY;
+      
+      // Default to first section
+      let current = sections[0].id;
+      
+      // Check each section's position
+      for (let i = 0; i < sectionPositions.length; i++) {
+        const section = sectionPositions[i];
+        
+        // If we've scrolled past the top of this section
+        if (scrollPosition >= section.top) {
+          current = section.id;
+        }
+        
+        // If we're not yet at the next section, this must be the current one
+        if (i < sectionPositions.length - 1 && scrollPosition < sectionPositions[i + 1].top) {
+          current = section.id;
+          break;
+        }
+      }
+      
+      return current;
+    }
+    
+    // Function to update the active navigation link
+    function updateActiveNav() {
+      const currentSectionId = getCurrentSection();
+      
+      // Remove active class from all links
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+      
+      // Add active class to the current section's link
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === '#' + currentSectionId) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    // Set initial active state
+    window.addEventListener('load', function() {
+      // Force layout recalculation to ensure correct positions
+      sections.forEach(section => section.offsetHeight);
+      
+      // Update section positions after all content is loaded
+      sectionPositions.forEach((section, index) => {
+        section.top = sections[index].offsetTop - 120;
+        section.bottom = section.top + sections[index].offsetHeight;
+      });
+      
+      // Set initial active link
+      updateActiveNav();
+    });
+    
+    // Update active state on scroll
+    window.addEventListener('scroll', function() {
+      updateActiveNav();
+    });
+    
+    // Handle click events for smooth scrolling
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          // Smooth scroll to target
+          window.scrollTo({
+            top: targetElement.offsetTop - 100,
+            behavior: 'smooth'
+          });
+          
+          // Update active state immediately
+          navLinks.forEach(navLink => navLink.classList.remove('active'));
+          this.classList.add('active');
+        }
+      });
+    });
+  });
+  </script>
 </body>
 </html>

@@ -10,79 +10,54 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <!-- SEO -->
   <meta name="description" content="Wan Shariff - Product Designer specializing in UI/UX design, branding, and digital experiences">
-  <style>
-    /* Sidebar sticky navigation styles */
-    #sidebarContainer {
-      position: sticky;
-      top: 80px;
-      max-height: calc(100vh - 100px);
-      overflow-y: auto;
-    }
-    
-    .sidebar-nav .nav-link {
-      padding: 8px 0;
-      transition: all 0.2s ease;
-    }
-    
-    .sidebar-nav .nav-link:hover {
-      color: var(--accent-light) !important;
-      transform: translateX(3px);
-    }
-    
-    .sidebar-nav .nav-link.active {
-      color: var(--accent-light) !important;
-      font-weight: bold;
-      border-left: 3px solid var(--accent-light);
-      padding-left: 8px;
-    }
-    
-    /* Styles for article divider */
-    .article-divider {
-      height: 1px;
-      background-color: var(--primary-medium);
-      margin: 40px 0;
-      opacity: 0.3;
-    }
-  </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid px-4">
-      <a class="navbar-brand" href="index.html"><h3>Wan Shariff</h3></a>
+  <nav class="navbar navbar-expand-lg fixed-top py-4">
+    <div class="container">
+      <!-- Logo/name on left side (unchanged) -->
+      <a class="navbar-brand" href="index.html">
+        <div class="logo-wrapper">
+          <img src="image/wanshariff.svg" alt="Wan Shariff" class="logo-svg">
+        </div>
+      </a>
+      
+      <!-- Mobile toggle button -->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+      <!-- Navbar content with centered menu and right button -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+        <!-- Center-aligned navigation -->
+        <ul class="navbar-nav mx-auto" style="background-blend-mode: difference;">
+          <li class="nav-item mb-0 px-2"><a class="nav-link" href="index.html">HOME</a></li>
+          <li class="nav-item mb-0 px-2"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+          <li class="nav-item mb-0 px-2"><a class="nav-link" href="about.html">ABOUT</a></li>
         </ul>
+        
+        <!-- Contact button on right side -->
+        <div class="ms">
+          <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+        </div>
       </div>
     </div>
   </nav>
     
-  <div class="main-content container-fluid p-3">
+  <div class="main-content container-fluid p-2">
     <!-- Hero Section -->
-    <section class="hero-section position-relative text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto;">
-      <div class="hero-section-content container-fluid px-4">
+    <section class="hero-section text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto;">
+      <div class="portfolio-details hero-section-content container px-4">
         <div class="row">
           <div class="col-md-6">
             <h1 class="text-light">Fixing Hotel Content Gaps for a Better Booking Experience</h1>
-            <p class="text-light mb-3">How we redesigned the hotel booking platform to provide better information and increase conversions</p>
-            <div class="d-flex align-items-center mb-3">
-              <div>
-                <span>Wan Shariff</span>
-                <span class="ms-3 text-light-50">Mar 10, 2025 · 8 min read</span>
-              </div>
-            </div>
             <div class="mb-4">
               <span class="label me-2 mb-2">Brand Styleguide</span>
               <span class="label me-2 mb-2">UI Revamp</span>
               <span class="label me-2 mb-2">Design System</span>
               <span class="label me-2 mb-2">Feature Update</span>
             </div>
+            <p class="lead text-light">How we redesigned the hotel booking platform to provide better information and increase conversions</p>
           </div>
           <div class="col-md-6">
             <figure class="article-image">
@@ -93,61 +68,59 @@
       </div>
     </section>
 
-    <!-- Main Content with Sidebar -->
-    <main class="container-fluid my-4 text-light">
+    <!-- Content with Sidebar -->
+    <div class="container my-4 text-light">
       <div class="row">
         <!-- Sidebar -->
-        <aside class="col-md-3 mb-4">
-          <div id="sidebarContainer" style="position: sticky; top: 80px;">
-            <nav class="sidebar-nav" id="sidebarNav">
+        <aside class="col-md-3">
+          <div class="sidebar-container sticky-top" style="top: 64px;">
+            <nav class="sidebar-nav">
               <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link text-light" href="#overview">Overview</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#problem">The Problem</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#objective">Objective</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#process">Design Process</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#outcome">Outcome</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#gallery">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link text-light" href="#learnings">Key Learnings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#overview">1. Overview</a></li>
+                <li class="nav-item"><a class="nav-link" href="#problem">2. The Problem</a></li>
+                <li class="nav-item"><a class="nav-link" href="#objective">3. Objective</a></li>
+                <li class="nav-item"><a class="nav-link" href="#process">4. Design Process</a></li>
+                <li class="nav-item"><a class="nav-link" href="#outcome">5. Outcome</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">6. Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#learnings">7. Key Learnings</a></li>
               </ul>
             </nav>
           </div>
         </aside>
 
         <!-- Content Section -->
-        <section class="col-md-9 article-content">
+        <section class="col-md-9 p-5">
           <!-- Project Overview -->
-          <div id="overview" class="mb-5">
-            <h2 class="text-light">OVERVIEW</h2>
-            <div class="row">
-              <div class="col mb-3">
-                <p class="text-light">This project focused on improving the hotel booking experience by addressing critical content gaps that were causing user drop-offs. Our approach combined comprehensive content strategy with intuitive UI design to provide users with the information they needed at each step of their journey.</p>
+          <div id="overview">
+            <h2>OVERVIEW</h2>
+              <div class="col">
+                <p>This project focused on improving the hotel booking experience by addressing critical content gaps that were causing user drop-offs. Our approach combined comprehensive content strategy with intuitive UI design to provide users with the information they needed at each step of their journey.</p>
               </div>
-              <div class="col- mb-3">
-                <table style="border-collapse: collapse; width: 100%;">
+              <div class="col- pb-3">
+                <table>
                   <tbody>
-                    <tr style="border-bottom: 1px solid #405c3f;">
-                      <th style="text-align: left; padding-right: 16px;"><p class="text-light m-0">Client</p></th>
-                      <td style="text-align: left; padding: 16px 0;"><p class="text-light m-0">Travel Platform Inc.</p></td>
+                    <tr>
+                      <th><p class="m-0">Client</p></th>
+                      <td><p class="m-0">Travel Platform Inc.</p></td>
                     </tr>
-                    <tr style="border-bottom: 1px solid #405c3f;">
-                      <th style="text-align: left; padding-right: 16px"><p class="text-light m-0">Role</p></th>
-                      <td style="text-align: left; padding: 16px 0;"><span class="label me-2">Product Designer</span><span class="label">Content Strategist</span></td>
+                    <tr>
+                      <th><p class="m-0">Role</p></th>
+                      <td><span class="label me-2">Product Designer</span><span class="label">Content Strategist</span></td>
                     </tr>
-                    <tr style="border-bottom: 1px solid #405c3f;">
-                      <th style="text-align: left; padding-right: 16px"><p class="text-light m-0">Timeline</p></th>
-                      <td style="text-align: left; padding: 16px 0;"><p class="text-light m-0">12 weeks</p></td>
+                    <tr>
+                      <th><p class="m-0">Timeline</p></th>
+                      <td><p class="m-0">12 weeks</p></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
           </div>
-          <div class="article-divider"></div>
+          <hr>
 
           <!-- The Problem -->
-          <div id="problem" class="mb-5">
-            <h2 class="text-light">THE PROBLEM</h2>
-            <p class="text-light">Hotels were struggling with inconsistent content across their listings. Users were dropping off during the booking process due to insufficient information about amenities, room features, and policies. This led to decreased trust and lower conversion rates.</p>
+          <div id="problem">
+            <h2>THE PROBLEM</h2>
+            <p>Hotels were struggling with inconsistent content across their listings. Users were dropping off during the booking process due to insufficient information about amenities, room features, and policies. This led to decreased trust and lower conversion rates.</p>
             
             <blockquote>
               "I often abandon bookings because I can't find information about cancellation policies or whether the room has the specific amenities I need."
@@ -158,66 +131,100 @@
               <figcaption>User drop-off points during the booking flow</figcaption>
             </figure>
           </div>
-          <div class="article-divider"></div>
+          <hr>
 
           <!-- Project Goal -->
-          <div id="objective" class="mb-5">
-            <h2 class="text-light">OBJECTIVE</h2>
-            <p class="text-light">Our goal was to standardize hotel content across the platform, ensuring customers have all the information they need to make informed booking decisions. By addressing these content gaps, we aimed to:</p>
-            
-            <ul>
-              <li>Increase booking conversion rates by 15%</li>
-              <li>Reduce customer support inquiries by 30%</li>
-              <li>Improve overall customer satisfaction scores</li>
-            </ul>
+          <div id="objective">
+            <h2>OBJECTIVE</h2>
+            <p>Our goal was to standardize hotel content across the platform, ensuring customers have all the information they need to make informed booking decisions. By addressing these content gaps, we aimed to:</p>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="small-card">
+                  Increase booking conversion rates by 15%
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="small-card">
+                  Reduce customer support inquiries by 30%
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="small-card">
+                  Improve overall customer satisfaction scores
+                </div>
+              </div>
+            </div>
             
             <!-- Secondary Visual -->
-            <div class="my-4">
+            <div>
               <figure class="article-image">
                 <img src="assets/images/img-01.jpg" alt="Project objective visualization">
                 <figcaption>Content standardization framework developed for the project</figcaption>
               </figure>
             </div>
           </div>
-          <div class="article-divider"></div>
+          <hr>
 
           <!-- Design Process -->
-          <div id="process" class="mb-5">
-            <h2 class="text-light">DESIGN PROCESS</h2>
+          <div id="process">
+            <h2>DESIGN PROCESS</h2>
             <div class="row">
-              <div class="col-md-6">
-                <h3 class="text-light">1. Research & Discovery</h3>
-                <p class="text-light">We analyzed user feedback, support tickets, and drop-off points in the booking funnel to identify common information gaps.</p>
-                
-                <h3 class="text-light">2. Content Standardization</h3>
-                <p class="text-light">We developed a comprehensive content framework that standardized information across all hotel listings.</p>
+              <div class="col-lg-3 col-md-6">
+                <div class="small-card process">
+                  <h6>1. Research & Discovery</h6>
+                  <p>We analyzed user feedback, support tickets, and drop-off points in the booking funnel to identify common information gaps.</p>
+                </div>
               </div>
-              <div class="col-md-6">
-                <h3 class="text-light">3. UI Design Solutions</h3>
-                <p class="text-light">Our design approach focused on surfacing the most critical information earlier in the user journey.</p>
-                
-                <h3 class="text-light">4. Testing & Validation</h3>
-                <p class="text-light">We conducted multiple rounds of usability testing to validate our solutions, making iterative improvements based on user feedback.</p>
+              <div class="col-lg-3 col-md-6">
+                <div class="small-card process">
+                  <h6>2. Content Standardization</h6>
+                  <p>We developed a comprehensive content framework that standardized information across all hotel listings.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="small-card process">
+                  <h6>3. UI Design Solutions</h6>
+                  <p>Our design approach focused on surfacing the most critical information earlier in the user journey.</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="small-card process">
+                  <h6>4. Testing & Validation</h6>
+                  <p>We conducted multiple rounds of usability testing to validate our solutions, making iterative improvements based on user feedback.</p>
+                </div>
               </div>
             </div>
+              
             
             <figure class="article-image">
               <img src="assets/images/img-01.jpg" alt="Design Process Visualization">
               <figcaption>Design exploration showing information architecture evolution</figcaption>
             </figure>
           </div>
-          <div class="article-divider"></div>
+          <hr>
 
           <!-- Outcome Summary -->
-          <div id="outcome" class="mb-5">
-            <h2 class="text-light">OUTCOME</h2>
-            <p class="text-light">The redesigned hotel content experience resulted in significant improvements across key metrics:</p>
+          <div id="outcome">
+            <h2>OUTCOME</h2>
+            <p>The redesigned hotel content experience resulted in significant improvements across key metrics:</p>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="small-card success">
+                  18% increase in booking conversion rates, exceeding our goal
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="small-card success">
+                  42% reduction in customer support inquiries about hotel amenities and policies
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="small-card success">
+                  Customer satisfaction scores improved from 3.6/5 to 4.5/5
+                </div>
+              </div>
+            </div>
             
-            <ul>
-              <li>18% increase in booking conversion rates, exceeding our goal</li>
-              <li>42% reduction in customer support inquiries about hotel amenities and policies</li>
-              <li>Customer satisfaction scores improved from 3.6/5 to 4.5/5</li>
-            </ul>
             
             <!-- Tertiary Visual -->
             <figure class="article-image">
@@ -225,58 +232,84 @@
               <figcaption>Key performance metrics before and after implementation</figcaption>
             </figure>
             
-            <blockquote>
+            <blockquote class="success">
               "The new detail pages give me everything I need to know before booking. I feel much more confident in my choices now."
             </blockquote>
           </div>
-          <div class="article-divider"></div>
+          <hr>
 
           <!-- Extra Shots (Gallery) -->
-          <div id="gallery" class="mb-5">
-            <h2 class="text-light">GALLERY</h2>
+          <div id="gallery">
+            <h2>GALLERY</h2>
             <div class="row">
-              <div class="col-md-4 mb-3">
-                <figure class="article-image mb-0">
+              <div class="col-md-4">
+                <figure class="article-image">
                   <img src="assets/images/img-01.jpg" alt="Final Design 1">
                   <figcaption>Hotel listing page with enhanced content</figcaption>
                 </figure>
               </div>
-              <div class="col-md-4 mb-3">
-                <figure class="article-image mb-0">
+              <div class="col-md-4">
+                <figure class="article-image">
                   <img src="assets/images/img-01.jpg" alt="Final Design 2">
                   <figcaption>Room detail page with standardized information</figcaption>
                 </figure>
               </div>
-              <div class="col-md-4 mb-3">
-                <figure class="article-image mb-0">
+              <div class="col-md-4">
+                <figure class="article-image">
                   <img src="assets/images/img-01.jpg" alt="Final Design 3">
                   <figcaption>Policies section with clear cancellation terms</figcaption>
                 </figure>
               </div>
             </div>
           </div>
-          <div class="article-divider"></div>
+          <hr>
 
           <!-- Key Learnings -->
-          <div id="learnings" class="mb-5">
-            <h2 class="text-light">KEY LEARNINGS</h2>
-            <p class="text-light">This project reinforced the importance of comprehensive content strategy in e-commerce experiences. By addressing information gaps, we not only improved conversion metrics but also enhanced customer trust and satisfaction.</p>
+          <div id="learnings">
+            <h2>KEY LEARNINGS</h2>
+            <p>This project reinforced the importance of comprehensive content strategy in e-commerce experiences. By addressing information gaps, we not only improved conversion metrics but also enhanced customer trust and satisfaction.</p>
             
-            <p class="text-light">Moving forward, we've implemented a content governance system to ensure all new hotel listings meet our content standards before going live on the platform.</p>
+            <p>Moving forward, we've implemented a content governance system to ensure all new hotel listings meet our content standards before going live on the platform.</p>
           </div>
 
+          <!-- Feedback -->
+          <div class="feedback">
+            <div class="d-flex align-items-center">
+              <!-- Feedback Icon -->
+              <div class="me-3">
+                <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" class="bi bi-chat-left" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                  </svg>
+                </div>
+              </div>
+              
+              <!-- Feedback Text -->
+              <div class="me-auto">
+                <h5 class="mb-0 fw-bold">Got feedback?</h5>
+                <p class="text-muted mb-0">Share your thoughts and feedbacks on this project.</p>
+              </div>
+              
+              <!-- Feedback Button -->
+              <div>
+                <button class="btn btn-outline-secondary rounded-pill px-4">Share Feedback</button>
+              </div>
+            </div>
+          </div>
+          <hr>
+
           <!-- Next Project -->
-          <div class="text-center mt-5 mb-3">
+          <div>
             <a href="#" class="btn btn-primary">Next Project: Project Title</a>
           </div>
         </section>
       </div>
-    </main>
+    </div>
     
     <!-- Footer -->
     <footer>
       <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Wan Shariff. All rights reserved.</p>
+        <p>&copy; 2025 Wan Shariff. All rights reserved.</p>
       </div>
     </footer>
 
@@ -286,50 +319,111 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const sections = document.querySelectorAll("[id]");
-      const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+  // Wait for the document to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all section elements that have IDs
+  const sections = document.querySelectorAll('section[id], div[id]');
+  // Get all sidebar navigation links
+  const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+  
+  if (sections.length === 0 || navLinks.length === 0) {
+    console.error('Sections or navigation links not found');
+    return;
+  }
+  
+  // Create an array to store section positions
+  const sectionPositions = Array.from(sections).map(section => {
+    return {
+      id: section.id,
+      top: section.offsetTop - 120, // Adjust offset as needed
+      bottom: section.offsetTop + section.offsetHeight - 120
+    };
+  });
+  
+  // Function to find the section currently in view
+  function getCurrentSection() {
+    const scrollPosition = window.scrollY;
+    
+    // Default to first section
+    let current = sections[0].id;
+    
+    // Check each section's position
+    for (let i = 0; i < sectionPositions.length; i++) {
+      const section = sectionPositions[i];
       
-      function highlightNavItem() {
-        const scrollY = window.pageYOffset;
-        
-        sections.forEach(current => {
-          const sectionHeight = current.offsetHeight;
-          const sectionTop = current.offsetTop - 100;
-          const sectionId = current.getAttribute("id");
-          
-          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
-              link.classList.remove("active");
-              if (link.getAttribute("href") === "#" + sectionId) {
-                link.classList.add("active");
-              }
-            });
-          }
-        });
+      // If we've scrolled past the top of this section
+      if (scrollPosition >= section.top) {
+        current = section.id;
       }
       
-      window.addEventListener("scroll", highlightNavItem);
-      
-      // Smooth scrolling for sidebar links
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetId = this.getAttribute('href');
-          const targetSection = document.querySelector(targetId);
-          
-          if (targetSection) {
-            window.scrollTo({
-              top: targetSection.offsetTop - 80,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-      
-      // Initial check for scroll position when page loads
-      highlightNavItem();
+      // If we're not yet at the next section, this must be the current one
+      if (i < sectionPositions.length - 1 && scrollPosition < sectionPositions[i + 1].top) {
+        current = section.id;
+        break;
+      }
+    }
+    
+    return current;
+  }
+  
+  // Function to update the active navigation link
+  function updateActiveNav() {
+    const currentSectionId = getCurrentSection();
+    
+    // Remove active class from all links
+    navLinks.forEach(link => {
+      link.classList.remove('active');
     });
+    
+    // Add active class to the current section's link
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === '#' + currentSectionId) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  // Set initial active state
+  window.addEventListener('load', function() {
+    // Force layout recalculation to ensure correct positions
+    sections.forEach(section => section.offsetHeight);
+    
+    // Update section positions after all content is loaded
+    sectionPositions.forEach((section, index) => {
+      section.top = sections[index].offsetTop - 120;
+      section.bottom = section.top + sections[index].offsetHeight;
+    });
+    
+    // Set initial active link
+    updateActiveNav();
+  });
+  
+  // Update active state on scroll
+  window.addEventListener('scroll', function() {
+    updateActiveNav();
+  });
+  
+  // Handle click events for smooth scrolling
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      
+      if (targetElement) {
+        // Smooth scroll to target
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: 'smooth'
+        });
+        
+        // Update active state immediately
+        navLinks.forEach(navLink => navLink.classList.remove('active'));
+        this.classList.add('active');
+      }
+    });
+  });
+});
   </script>
 </body>
 </html>
