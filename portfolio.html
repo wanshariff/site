@@ -8,239 +8,496 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/yfr0hqd.css">
   <script src="https://kit.fontawesome.com/32f04313b6.js" crossorigin="anonymous"></script>
+  
+  <style>
+    /* Pill-style filter buttons */
+    .filter-pill-container {
+      display: flex;
+      background-color: #f8f9fa;
+      border-radius: 50px;
+      padding: 4px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .filter-pill {
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-pill.active {
+      background-color: var(--brand-light);
+      color: var(--brand-dark);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .filter-pill:hover:not(.active) {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    /* Project type pill badges */
+    .project-type {
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      width: fit-content;
+    }
+
+    .project-type.case-study {
+      background-color: var(--brand-secondary);
+      color: white;
+    }
+
+    .project-type.design {
+      background-color: var(--accent-primary);
+      color: white;
+    }
+
+    .project-type.video {
+      background-color: var(--error-primary);
+      color: white;
+    }
+
+    /* Masonry grid specific styles */
+    .masonry-grid {
+      position: relative; /* Required for Masonry layout */
+    }
+
+
+    .portfolio-item.hidden {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    /* Card styles */
+    .card {
+      height: 100%;
+      min-height: 280px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-body {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 100%);
+      padding: 20px;
+      height: 100%;
+    }
+
+    .card-title {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      .masonry-item {
+        width: calc(50% - 20px); /* Two columns on medium screens */
+      }
+    }
+
+    @media (max-width: 575px) {
+      .masonry-item {
+        width: 100%; /* Single column on small screens */
+      }
+      
+      .filter-pill-container {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top dynamic-navbar px-4">
-    <div class="container">
-      <a class="navbar-brand" href="index.html"><h3>Wan Shariff</h3></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html" style="font-size: 18px; letter-spacing: 3px;">HOME</a></li>
-          <li class="nav-item"><a class="nav-link active" href="portfolio.html" style="font-size: 18px; letter-spacing: 3px;">PORTFOLIO</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html" style="font-size: 18px; letter-spacing: 3px;">ABOUT</a></li>
-        </ul>
+<!-- NAVBAR -->
+<nav class="navbar bg-light navbar-expand-lg sticky-top py-0">
+  <div class="container">
+    <!-- Logo/name on left side -->
+    <a class="navbar-brand" href="index.html">
+      <div class="logo-wrapper">
+        <img src="assets/images/WANSHARIFF.svg" class="logo-svg" alt="Wan Shariff">
+      </div>
+    </a>
+    
+    <!-- Mobile toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Navbar content with centered menu and right button -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Center-aligned navigation -->
+      <ul class="navbar-nav mx-auto py-0">
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="about.html">ABOUT</a></li>
+      </ul>
+      
+      <!-- Contact button on right side - now opens modal -->
+      <div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Get In Touch
+        </button>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <div class="main-content container-fluid p-3">
-
-    <!-- Hero Section -->
-    <section class="hero-section position-relative text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto; mix-blend-mode: luminosity;">
-      
-      <div class="hero-section-content container">
-        <div class="row">
-          <h1 class="text-light">My Portfolio</h1>
-        </div>
-        <div class="row">
-          <div class="col-md-8">
-            <p class="mb-3">Explore a collection of my projects and case studies showcasing my design expertise and problem-solving skills.</p>
-          </div>
-        </div>
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="contactModalLabel">Let's Connect</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-    </section>
-
-    <!-- Portfolio Grid -->
-    <main class="container my-5">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card p-3 text-light" style="background-image: url(assets/images/kapitani-thumb-img.avif);">
-            <div class="card-body p-4">
-              <h4 class="card-title">Kapitani: Farm Management App UI Revamp</h4>
-              <span class="label me-2 mb-2">Brand Styleguide</span>
-              <span class="label me-2 mb-2">UI Revamp</span>
-              <span class="label me-2 mb-2">Design System</span>
-              <span class="label me-2 mb-2">Feature Update</span>
-              <a href="project-details.html" class="btn btn-primary">View Case Study</a>
+      <div class="modal-body">
+        <div class="contact-options">
+          <!-- Email Option -->
+          <div class="contact-option">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-light" style="background-image: url(assets/images/aamove1-thumb-img.avif);">
-            <div class="card-body p-4">
-              <h4 class="card-title">Enhancing Hotel Content in AirAsia Move</h4>
-              <span class="label me-2 mb-2">Brand Styleguide</span>
-              <span class="label me-2 mb-2">UI Revamp</span>
-              <span class="label me-2 mb-2">Design System</span>
-              <span class="label me-2 mb-2">Feature Update</span>
-              <a href="project-details.html" class="btn btn-primary">View Case Study</a>
+            <div class="contact-details">
+              <h5 class="mb-0">Email Me</h5>
+              <p>Get in touch directly via email</p>
+              <a href="mailto:syazwanshariff@gmail.com" class="btn btn-sm btn-outline-secondary">Send Email</a>
             </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card p-3 text-light" style="background-image: url(assets/images/musawah-thumb-img.avif);">
-            <div class="card-body p-4">
-              <h4 class="card-title">Musawah Microsite Design & Content Restructure</h4>
-              <span class="label me-2 mb-2">Brand Styleguide</span>
-              <span class="label me-2 mb-2">UI Revamp</span>
-              <span class="label me-2 mb-2">Design System</span>
-              <span class="label me-2 mb-2">Feature Update</span>
-              <a href="project-details.html" class="btn btn-primary">View Case Study</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <!-- Portfolio Grid -->
-    <main class="container my-5">
-      <!-- Non-Case Study Projects -->
-        <h2 class="mb-4">Other Projects</h2>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <a href="assets/images/justified-thumb-img.jpg" class="lightbox-trigger" data-title="Justified Juice Bar" data-tags="Logo Design">
-              <div class="card-gallery text-light" style="background-image: url(assets/images/justified-thumb-img.jpg);">
-                <div class="card-body-gallery p-4">
-                  <h4 class="card-title">Justified Juice Bar</h4>
-                  <span class="label me-2 mb-2">Logo Design</span>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="col-md-3 mb-3">
-            <a href="assets/images/nestum-thumb.jpg" class="lightbox-trigger" data-title="Nestum" data-tags="Brand Story, e-Commerce">
-              <div class="card-gallery text-light" style="background-image: url(assets/images/nestum-thumb.jpg);">
-                <div class="card-body-gallery p-4">
-                  <h4 class="card-title">Nestum</h4>
-                  <span class="label me-2 mb-2">Brand Story</span>
-                </div>
-              </div>
-            </a>
           </div>
           
-          <div class="col-md-3 mb-3">
-            <a href="assets/images/nescafe-img.jpg" class="lightbox-trigger" data-title="Nescafe One Touch - Brand Story Design">
-              <div class="card-gallery text-light" style="background-image: url(assets/images/nescafe-img.jpg);">
-                <div class="card-body-gallery p-4">
-                  <h4 class="card-title">Nescafe One Touch</h4>
-                  <span class="label me-2 mb-2">Brand Story</span>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3 mb-3">
-            <a href="assets/images/petronas-thumb.jpg" class="lightbox-trigger" data-title="Petronas HSE" data-tags="Poster Design, Safety">
-              <div class="card-gallery text-light" style="background-image: url(assets/images/petronas-thumb.jpg);">
-                <div class="card-body-gallery p-4">
-                  <h4 class="card-title">Petronas HSE</h4>
-                  <span class="label me-2 mb-2">Poster Design</span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        <!-- Lightbox Container -->
-        <div id="lightbox" class="lightbox-overlay" style="display: none;">
-          <div class="lightbox-content">
-            <!-- Full-size Image Section -->
-            <div class="lightbox-image-container">
-              <img id="lightbox-image" src="" alt="Lightbox Image">
-              <!-- Zoom Icon and Text -->
-              <div class="zoom-overlay">
-                <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <span class="zoom-text">Click on image to zoom in for details</span>
-              </div>
+          <!-- LinkedIn Option -->
+          <div class="contact-option">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
             </div>
-            <!-- Right-side Details -->
-            <div class="lightbox-details">
-              <span class="close-icon">&times;</span>
-              <h4 id="lightbox-title"></h4>
-              <ul id="lightbox-tags"></ul>
+            <div class="contact-details">
+              <h5 class="mb-0">Connect on LinkedIn</h5>
+              <p>View my professional profile and connect with me</p>
+              <a href="https://linkedin.com/in/wanshariff" target="_blank" class="btn btn-sm btn-outline-secondary">Connect via LinkedIn</a>
             </div>
           </div>
-        </div>
-        
-      </main>  
-
-      <!-- Video Animation Work Carousel -->
-      <section id="video-animation-work" class="position-relative">
-        <h2 class="mb-4">Video Animation Work</h2>
-        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-          <div class="carousel-inner">
-            <!-- Video 1 -->
-            <div class="carousel-item active">
-              <div class="row align-items-center">
-                <div class="col-md-8">
-                  <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/fQWREyq_hzs" title="Video Animation 1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="col-md-4 video-details">
-                  <h4>Video Animation 1</h4>
-                  <ul>
-                    <li>Tag 1</li>
-                    <li>Tag 2</li>
-                    <li>Tag 3</li>
-                  </ul>
-                  <div class="d-flex justify-content-between align-items-center mt-3">
-                    <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <span class="carousel-indicator">1 / 8</span>
-                    <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+          
+          <!-- Schedule a Chat Option -->
+          <div class="contact-option">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+              </svg>
             </div>
-
-            <!-- Video 2 -->
-            <div class="carousel-item">
-              <div class="row align-items-center">
-                <div class="col-md-8">
-                  <div class="ratio ratio-16x9">
-                    <iframe src="https://www.youtube.com/embed/zMFTuhwUvNQ" title="Video Animation 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-                </div>
-                <div class="col-md-4 video-details">
-                  <h4>Video Animation 2</h4>
-                  <ul>
-                    <li>Tag 1</li>
-                    <li>Tag 2</li>
-                    <li>Tag 3</li>
-                  </ul>
-                  <div class="d-flex justify-content-between align-items-center mt-3">
-                    <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <span class="carousel-indicator">2 / 8</span>
-                    <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
+            <div class="contact-details">
+              <h5 class="mb-0">Schedule a Chat</h5>
+              <p>Book a time to discuss your project</p>
+              <a href="https://calendar.app.google/JMzsFwgJRxeSYvUq8" target="_blank" class="btn btn-sm btn-outline-secondary">Find a Time</a>
             </div>
-
-            <!-- Add videos 3 to 8 in the same structure -->
+          </div>
+          
+          <!-- Download Resume Option -->
+          <div class="contact-option">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
+                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h5 class="mb-0">Download Resume</h5>
+              <p>Get a copy of my latest resume</p>
+              <a href="https://drive.google.com/file/d/1f8cYGzp3vLq5YbndSsxZ3q3bjUjjmKoG/view?usp=sharing" download class="btn btn-sm btn-outline-secondary">Download PDF</a>
+            </div>
           </div>
         </div>
-      </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="py-3">
-      <div class="container text-center">
-        <p class="mb-0">&copy; 2025 Wan Shariff. All rights reserved.</p>
       </div>
-    </footer>
+      <div class="modal-footer">
+        <p class="small text-muted m-0">Looking forward to connecting with you!</p>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class="main-content container-fluid p-3">
+
+  <!-- Hero Section -->
+  <section class="hero-section position-relative text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto; mix-blend-mode: luminosity;">
+    <div class="hero-section-content container">
+      <div class="row">
+        <h1 class="text-light">My Portfolio</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <p class="mb-3">Explore a collection of my projects and case studies showcasing my design expertise and problem-solving skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Filters -->
+    <div class="filter-pills mb-4 d-flex justify-content-center">
+      <div class="filter-pill-container">
+        <button type="button" class="filter-pill active" data-filter="all">All Projects</button>
+        <button type="button" class="filter-pill" data-filter="case-study">Case Studies</button>
+        <button type="button" class="filter-pill" data-filter="design">Design Shots</button>
+        <button type="button" class="filter-pill" data-filter="video">Videos</button>
+      </div>
+    </div>
+
+  <!-- Portfolio Masonry Grid -->
+   <div class="container">
+    <div class="masonry-grid">
+      <!-- Case Study 1 -->
+      <div class="masonry-item portfolio-item" data-type="case-study">
+        <div class="card h-100 text-light" style="background-image: url(assets/images/kapitani-thumb-img.avif);">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">Kapitani: Farm Management App</h4>
+            <span class="label project-type case-study">Case Study</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 2 -->
+      <div class="masonry-item portfolio-item" data-type="case-study">
+        <div class="card h-100 text-light" style="background-image: url(assets/images/aamove1-thumb-img.avif);">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">AirAsia Move Hotel Content</h4>
+            <span class="label project-type case-study">Case Study</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Design Shot 1 -->
+      <div class="masonry-item portfolio-item" data-type="design">
+        <div class="card h-100 text-light" style="background-image: url(assets/images/justified-thumb-img.jpg);">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">Justified Juice Bar</h4>
+            <span class="label project-type design">Logo Design</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Case Study 3 -->
+      <div class="masonry-item portfolio-item" data-type="case-study">
+        <div class="card h-100 text-light" style="background-image: url(assets/images/musawah-thumb-img.avif);">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">Musawah Microsite Design</h4>
+            <span class="label project-type case-study">Case Study</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Design Shot 2 -->
+      <div class="masonry-item portfolio-item" data-type="design">
+        <div class="card h-100 text-light" style="background-image: url(assets/images/nestum-thumb.jpg);">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">Nestum</h4>
+            <span class="label project-type design">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Design Shot 3 -->
+      <div class="masonry-item portfolio-item" data-type="design">
+        <div class="card h-100 text-light" style="background-image: url(assets/images/nescafe-img.jpg);">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">Nescafe One Touch</h4>
+            <span class="label project-type design">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Design Shot 4 -->
+      <div class="masonry-item portfolio-item" data-type="design">
+        <div class="card h-100 text-light" style="background-image: url(assets/images/petronas-thumb.jpg);">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">Petronas HSE</h4>
+            <span class="label project-type design">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video 1 -->
+      <div class="masonry-item portfolio-item" data-type="video">
+        <div class="card h-100 text-light" style="background-image: url('https://img.youtube.com/vi/fQWREyq_hzs/maxresdefault.jpg');">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">Animation Showreel</h4>
+            <span class="label project-type video">Motion Graphics</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video 2 -->
+      <div class="masonry-item portfolio-item" data-type="video">
+        <div class="card h-100 text-light" style="background-image: url('https://img.youtube.com/vi/zMFTuhwUvNQ/maxresdefault.jpg');">
+          <div class="card-body p-4 d-flex flex-column justify-content-end">
+            <h4 class="text-light">Motion Graphics Demo</h4>
+            <span class="label project-type video">Motion Graphics</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
+  <!-- Lightbox for Design Shots -->
+  <div class="modal fade" id="designLightbox" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="designTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <img id="designImage" src="" alt="Design image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox for Videos -->
+  <div class="modal fade" id="videoLightbox" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="videoTitle"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe id="videoFrame" src="" title="YouTube video" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="pt-2" style="color: var(--brand-light-);">&copy; 2025 Wan Shariff. All rights reserved.</p>
+    </div>
+  </footer>
+
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Get references to DOM elements
+  const grid = document.querySelector('.masonry-grid');
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const portfolioItems = document.querySelectorAll('.portfolio-item');
+  let msnry;
+  
+  // Initialize Masonry with imagesLoaded to prevent layout issues
+  imagesLoaded(grid, function() {
+    // Initialize Masonry after images are loaded
+    msnry = new Masonry(grid, {
+      itemSelector: '.masonry-item',
+      columnWidth: '.masonry-item',
+      percentPosition: true,
+      gutter: 24,
+      initLayout: true
+    });
+    
+    console.log('Masonry initialized after images loaded');
+  });
+  
+  // Filter functionality
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', function() {
+      // Update active state
+      filterPills.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      const filterValue = this.getAttribute('data-filter');
+      console.log('Filter clicked:', filterValue);
+      
+      // Filter items
+      portfolioItems.forEach(item => {
+        const itemType = item.getAttribute('data-type');
+        const shouldShow = filterValue === 'all' || filterValue === itemType;
+        
+        if (shouldShow) {
+          item.classList.remove('hidden');
+          item.style.display = 'block';
+        } else {
+          item.classList.add('hidden');
+          // Hide completely after transition finishes
+          setTimeout(() => {
+            if (item.classList.contains('hidden')) {
+              item.style.display = 'none';
+            }
+          }, 400);
+        }
+      });
+      
+      // Update layout after filter transition completes
+      setTimeout(() => {
+        msnry.layout();
+      }, 500);
+    });
+  });
+  
+  // Card click functionality
+  portfolioItems.forEach(item => {
+    const card = item.querySelector('.card');
+    const itemType = item.getAttribute('data-type');
+    
+    card.addEventListener('click', function() {
+      const title = item.querySelector('.card-title').textContent;
+      const bgImage = this.style.backgroundImage.slice(4, -1).replace(/"/g, '');
+      
+      if (itemType === 'case-study') {
+        window.open('project-details.html', '_blank');
+      } else if (itemType === 'design') {
+        document.getElementById('designTitle').textContent = title;
+        document.getElementById('designImage').src = bgImage;
+        new bootstrap.Modal(document.getElementById('designLightbox')).show();
+      } else if (itemType === 'video') {
+        const videoIdMatch = bgImage.match(/vi\/([^\/]+)\/maxresdefault/);
+        if (videoIdMatch && videoIdMatch[1]) {
+          const videoId = videoIdMatch[1];
+          const embedUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+          
+          document.getElementById('videoTitle').textContent = title;
+          document.getElementById('videoFrame').src = embedUrl;
+          
+          const videoModal = new bootstrap.Modal(document.getElementById('videoLightbox'));
+          videoModal.show();
+          
+          document.getElementById('videoLightbox').addEventListener('hidden.bs.modal', function() {
+            document.getElementById('videoFrame').src = '';
+          });
+        }
+      }
+    });
+  });
+});
+</script>
 </body>
 </html>
