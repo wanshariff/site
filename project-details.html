@@ -10,6 +10,33 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <!-- SEO -->
   <meta name="description" content="Wan Shariff - Product Designer specializing in UI/UX design, branding, and digital experiences">
+  <style>
+    figcaption {
+      font-size: 0.9rem;
+      color: #adb5bd;
+      text-align: center;
+      padding-top: 8px;
+      font-style: italic;
+    }
+    
+    .article-image {
+      margin-bottom: 2rem;
+      margin-top: 1.5rem;
+    }
+    
+    blockquote {
+      border-left: 4px solid rgba(255, 255, 255, 0.2);
+      padding-left: 1rem;
+      font-style: italic;
+      margin: 1.5rem 0;
+      color: #e9ecef;
+    }
+    
+    /* Better styling for the project info table */
+    .table.text-light th {
+      opacity: 0.8;
+    }
+  </style>
 </head>
 <body>
 
@@ -148,11 +175,11 @@
     </section>
 
     <!-- Content with Sidebar -->
-    <div class="container text-light">
+    <div class="container text-light p-1">
       <div class="row">
         <!-- Sidebar -->
         <aside class="col-md-3">
-          <div id="sidebarContainer">
+          <div id="sidebarContainer" class="sticky-top" style="top: 80px; z-index: 999;">
             <nav class="sidebar-nav">
               <h5>Table of Contents</h5>
               <ul class="nav flex-column">
@@ -169,18 +196,18 @@
         </aside>
 
         <!-- Content Section -->
-        <section class="col-md-9 p-5">
+        <section class="col p-5 ms-2">
           <!-- Project Overview -->
-          <div id="overview">
+          <div class="py-4" id="overview">
             <h2>OVERVIEW</h2>
               <div class="col">
                 <p>This project focused on improving the hotel booking experience by addressing critical content gaps that were causing user drop-offs. Our approach combined comprehensive content strategy with intuitive UI design to provide users with the information they needed at each step of their journey.</p>
               </div>
-              <div class="col- pb-3">
-                <table>
+              <div class="col-12 pb-3">
+                <table class="table table-borderless text-light">
                   <tbody>
                     <tr>
-                      <th><p class="m-0">Client</p></th>
+                      <th width="120"><p class="m-0">Client</p></th>
                       <td><p class="m-0">Travel Platform Inc.</p></td>
                     </tr>
                     <tr>
@@ -198,7 +225,7 @@
           <hr>
 
           <!-- The Problem -->
-          <div id="problem">
+          <div class="py-4"  id="problem">
             <h2>THE PROBLEM</h2>
             <p>Hotels were struggling with inconsistent content across their listings. Users were dropping off during the booking process due to insufficient information about amenities, room features, and policies. This led to decreased trust and lower conversion rates.</p>
             
@@ -214,7 +241,7 @@
           <hr>
 
           <!-- Project Goal -->
-          <div id="objective">
+          <div class="py-4"  id="objective">
             <h2>OBJECTIVE</h2>
             <p>Our goal was to standardize hotel content across the platform, ensuring customers have all the information they need to make informed booking decisions. By addressing these content gaps, we aimed to:</p>
             <div class="row">
@@ -246,7 +273,7 @@
           <hr>
 
           <!-- Design Process -->
-          <div id="process">
+          <div class="py-4"  id="process">
             <h2>DESIGN PROCESS</h2>
             <div class="row">
               <div class="col-lg-3 col-md-6">
@@ -284,7 +311,7 @@
           <hr>
 
           <!-- Outcome Summary -->
-          <div id="outcome">
+          <div class="py-4"  id="outcome">
             <h2>OUTCOME</h2>
             <p>The redesigned hotel content experience resulted in significant improvements across key metrics:</p>
             <div class="row">
@@ -319,7 +346,7 @@
           <hr>
 
           <!-- Extra Shots (Gallery) -->
-          <div id="gallery">
+          <div class="py-4"  id="gallery">
             <h2>GALLERY</h2>
             <div class="row">
               <div class="col-md-4">
@@ -345,7 +372,7 @@
           <hr>
 
           <!-- Key Learnings -->
-          <div id="learnings">
+          <div class="py-4"  id="learnings">
             <h2>KEY LEARNINGS</h2>
             <p>This project reinforced the importance of comprehensive content strategy in e-commerce experiences. By addressing information gaps, we not only improved conversion metrics but also enhanced customer trust and satisfaction.</p>
             
@@ -353,7 +380,7 @@
           </div>
 
           <!-- Feedback -->
-          <div class="feedback">
+          <div class="py-4"  class="feedback">
             <div class="d-flex align-items-center">
               <!-- Feedback Icon -->
               <div class="me-3">
@@ -403,6 +430,24 @@
   // Get all sections and navigation links
   const sections = document.querySelectorAll("#overview, #problem, #objective, #process, #outcome, #gallery, #learnings");
   const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
+  
+  // Add active class styling directly in the script
+  const style = document.createElement('style');
+  style.innerHTML = `
+    .sidebar-nav .nav-link.active {
+      color: #ffffff;
+      font-weight: bold;
+      border-left: 3px solid #ffffff;
+      padding-left: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .sidebar-nav .nav-link {
+      transition: all 0.3s ease;
+      border-left: 3px solid transparent;
+      padding-left: 10px;
+    }
+  `;
+  document.head.appendChild(style);
   
   // Create an Intersection Observer
   const observerOptions = {
