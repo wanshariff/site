@@ -1,385 +1,299 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | Wan Shariff</title>
+  <title>About - Wan Shariff: Your Dedicated Digital Partner</title>
+  <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="https://use.typekit.net/yfr0hqd.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <!-- SEO -->
-  <meta name="description" content="Wan Shariff - Product Designer specializing in UI/UX design, branding, and digital experiences">
+  <meta name="description" content="Learn about Wan Shariff - Your dedicated digital partner in Malaysia. My story, mission, and philosophy behind empowering your digital presence.">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar bg-light navbar-expand-lg sticky-top py-0">
-    <div class="container">
-      <!-- Logo/name on left side -->
-      <a class="navbar-brand" href="index.html">
-        <div class="logo-wrapper">
-          <img src="assets/images/WANSHARIFF.svg" class="logo-svg" alt="Wan Shariff">
-        </div>
-      </a>
-      
-      <!-- Mobile toggle button -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <!-- Navbar content with centered menu and right button -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- Center-aligned navigation -->
-        <ul class="navbar-nav mx-auto py-0">
-          <li class="nav-item mb-0 px-2"><a class="nav-link" href="index.html">HOME</a></li>
-          <li class="nav-item mb-0 px-2"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
-          <li class="nav-item mb-0 px-2"><a class="nav-link active" href="about.html">ABOUT</a></li>
-        </ul>
-        
-        <!-- Contact button on right side - now opens modal -->
-        <div>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
-            Get In Touch
-          </button>
-        </div>
+  <!-- NAVBAR -->
+<nav class="navbar bg-light navbar-expand-lg sticky-top py-0">
+  <div class="container">
+    <!-- Logo/name on left side -->
+    <a class="navbar-brand" href="index.html">
+      <div class="logo-wrapper">
+        <img src="assets/images/WANSHARIFF.svg" class="logo-svg" alt="Wan Shariff">
       </div>
-    </div>
-  </nav>
-
-  <!-- Contact Modal -->
-  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title" id="contactModalLabel">Let's Connect</h3>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="contact-options">
-            <!-- Email Option -->
-            <div class="contact-option">
-              <div class="contact-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-                </svg>
-              </div>
-              <div class="contact-details">
-                <h5 class="mb-0">Email Me</h5>
-                <p>Get in touch directly via email</p>
-                <a href="mailto:syazwanshariff@gmail.com" class="btn btn-sm btn-outline-secondary">Send Email</a>
-              </div>
-            </div>
-            
-            <!-- LinkedIn Option -->
-            <div class="contact-option">
-              <div class="contact-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
-                </svg>
-              </div>
-              <div class="contact-details">
-                <h5 class="mb-0">Connect on LinkedIn</h5>
-                <p>View my professional profile and connect with me</p>
-                <a href="https://linkedin.com/in/wanshariff" target="_blank" class="btn btn-sm btn-outline-secondary">Connect via LinkedIn</a>
-              </div>
-            </div>
-            
-            <!-- Schedule a Chat Option -->
-            <div class="contact-option">
-              <div class="contact-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
-                  <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
-                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                </svg>
-              </div>
-              <div class="contact-details">
-                <h5 class="mb-0">Schedule a Chat</h5>
-                <p>Book a time to discuss your project</p>
-                <a href="https://calendar.app.google/JMzsFwgJRxeSYvUq8" target="_blank" class="btn btn-sm btn-outline-secondary">Find a Time</a>
-              </div>
-            </div>
-            
-            <!-- Download Resume Option -->
-            <div class="contact-option">
-              <div class="contact-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
-                  <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
-                </svg>
-              </div>
-              <div class="contact-details">
-                <h5 class="mb-0">Download Resume</h5>
-                <p>Get a copy of my latest resume</p>
-                <a href="https://drive.google.com/file/d/1f8cYGzp3vLq5YbndSsxZ3q3bjUjjmKoG/view?usp=sharing" download class="btn btn-sm btn-outline-secondary">Download PDF</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <p class="small text-muted m-0">Looking forward to connecting with you!</p>
-        </div>
+    </a>
+    
+    <!-- Mobile toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Navbar content with centered menu and right button -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- Center-aligned navigation -->
+      <ul class="navbar-nav mx-auto py-0">
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link active" href="about.html">ABOUT</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="services.html">SERVICES</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="#contact">CONTACT</a></li>
+      </ul>
+      
+      <!-- Contact button on right side - now opens modal -->
+      <div>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Let's Talk About Your Project
+        </button>
       </div>
     </div>
   </div>
+</nav>
 
-  <div class="main-content container-fluid p-3">
-    <!-- Hero Section -->
-    <section class="hero-section text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto;">
-      <div class="hero-section-content container pt-4">
-        <div class="row">
-          <div class="col-md-8">
-            <h1 class="text-light">About</h1>
-            <p class="lead text-light">Learn more about my journey, skills, and experiences.</p>
+<!-- Contact Modal -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="contactModalLabel">Let's Connect</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="contact-options">
+          <!-- Email Option -->
+          <div class="contact-option">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h5 class="mb-0">Email Me</h5>
+              <p>Get in touch directly via email</p>
+              <a href="mailto:syazwanshariff@gmail.com" class="btn btn-sm btn-outline-secondary">Send Email</a>
+            </div>
+          </div>
+          
+          <!-- LinkedIn Option -->
+          <div class="contact-option">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h5 class="mb-0">Connect on LinkedIn</h5>
+              <p>View my professional profile and connect with me</p>
+              <a href="https://linkedin.com/in/wanshariff" target="_blank" class="btn btn-sm btn-outline-secondary">Connect via LinkedIn</a>
+            </div>
+          </div>
+          
+          <!-- Schedule a Chat Option -->
+          <div class="contact-option">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar-check" viewBox="0 0 16 16">
+                <path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h5 class="mb-0">Schedule a Chat</h5>
+              <p>Book a time to discuss your project</p>
+              <a href="https://calendar.app.google/JMzsFwgJRxeSYvUq8" target="_blank" class="btn btn-sm btn-outline-secondary">Find a Time</a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Content with Sidebar -->
-    <div class="container my-4 text-light">
-      <div class="row">
-        <!-- Sidebar -->
-        <aside class="col-md-3">
-          <div id="sidebarContainer" class="sticky-top" style="top: 80px; z-index: 999;">
-            <nav class="sidebar-nav">
-              <ul class="nav flex-column">
-                <li class="nav-item"><a class="nav-link" href="#personal-information">Personal Information</a></li>
-                <li class="nav-item"><a class="nav-link" href="#background-overview">Background Overview</a></li>
-                <li class="nav-item"><a class="nav-link" href="#skills-competency">Skills & Competency</a></li>
-                <li class="nav-item"><a class="nav-link" href="#work-experience">Work Experience</a></li>
-                <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link" href="#certifications">Additional Certifications</a></li>
-              </ul>
-            </nav>
-          </div>
-        </aside>
-        
-        <!-- Content Section -->
-        <section class="col-md-9 p-5">
-          <!-- Personal Information -->
-          <div id="personal-information">
-            <h2>PERSONAL INFORMATION</h2>
-            <table>
-              <tbody>
-                <tr>
-                  <th><p class="m-0">Full name:</p></th>
-                  <td><p class="m-0">Syazwan Iylia bin Shariff</p></td>
-                </tr>
-                <tr>
-                  <th><p class="m-0">Email:</p></th>
-                  <td><p class="m-0">syazwanshariff@gmail.com</p></td>
-                </tr>
-                <tr>
-                  <th><p class="m-0">Based in:</p></th>
-                  <td><p class="m-0">Shah Alam, Selangor, Malaysia</p></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <hr>
-
-          <!-- Background Overview -->
-          <div id="background-overview">
-            <h2>BACKGROUND OVERVIEW</h2>
-            <p>Product Designer with 12+ years of experience driving business impact through user-centered design. Led design initiatives resulting in 29% business growth at AirAsia MOVE, while building scalable design systems and mentoring teams. Proven track record of translating complex requirements into intuitive solutions across finance, travel, and government sectors.</p>
-          </div>
-          <hr>
-
-          <!-- Skills & Competency -->
-          <div id="skills-competency">
-            <h2>SKILLS & COMPETENCY</h2>
-            <div class="my-4">
-              <h4>Streategic Design</h4>
-              <span class="label me-2 mb-2">Product Strategy</span>
-              <span class="label me-2 mb-2">Design System</span>
-              <span class="label me-2 mb-2">User Research</span>
-              <span class="label me-2 mb-2">User Testing</span>
-              <span class="label me-2 mb-2">Information Architecture</span>
-              <span class="label me-2 mb-2">Design Thinking Workshop</span>
-            </div>
-            <div class="my-4">
-              <h4>Tools & Technology</h4>
-                <span class="label me-2 mb-2">Figma</span>
-                <span class="label me-2 mb-2">Adobe Creative Suite</span>
-                <span class="label me-2 mb-2">Framer</span>
-                <span class="label me-2 mb-2">Webflow</span>
-                <span class="label me-2 mb-2">WordPress</span>
-                <span class="label me-2 mb-2">OutSystems</span>
-                <span class="label me-2 mb-2">Joomla</span>
-            </div>
-            <div class="my-4">
-              <h4>Product Management</h4>
-                <span class="label me-2 mb-2">Data Analytics</span>
-                <span class="label me-2 mb-2">Performance Tracking</span>
-                <span class="label me-2 mb-2">Stakeholder Management</span>
-                <span class="label me-2 mb-2">Cross-functional Collaboration</span>
-                <span class="label me-2 mb-2">Design Documentation</span>
-                <span class="label me-2 mb-2">Knowledge Transfer & Training</span>
-              </div>
-          </div>
-          <hr>
-
-          <!-- Work Experience -->
-          <div id="work-experience" class="mb-5">
-            <h2>WORK EXPERIENCE</h2>
-            <!-- Work experience content remains unchanged -->
-            <div class="timeline">
-              <!-- Work experience content remains the same -->
-              <!-- Existing timeline content stays as is -->
-            </div>
-          </div>
-          <hr>
-
-          <!-- Education -->
-          <div id="education">
-            <h2>EDUCATION</h2>
-            
-            <div class="timeline">
-              <div class="timeline-container">
-                <div class="timeline-date"><span class="label">2008 - 2011</span></div>
-                <div class="timeline-content">
-                  <h5>Diploma in Graphic Design</h5>
-                  <h6>Limkokwing University of Creative Technology</h6>
-                  <ul>
-                    <li>Specialized in Visual Communication with focus on digital media and interactive design</li>
-                    <li>Graduated with distinction, recognized for excellence in digital illustration and UI design projects</li>
-                    <li>Completed capstone project developing branding and digital presence for local businesses</li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div class="timeline-container">
-                <div class="timeline-date"><span class="label">2020</span></div>
-                <div class="timeline-content">
-                  <h5>Professional Certification in UX Design</h5>
-                  <h6>Interaction Design Foundation</h6>
-                  <ul>
-                    <li>Completed comprehensive program focusing on user research methodologies and advanced interaction design</li>
-                    <li>Developed expertise in design systems implementation and information architecture</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr>
-
-          <!-- Additional Certifications -->
-          <div id="certifications">
-            <h2>ADDITIONAL CERTIFICATIONS</h2>
-            <ul>
-              <li>Certification Name | Institution | Year</li>
-              <li>Certification Name | Institution | Year</li>
-            </ul>
-          </div>
-        </section>
+      <div class="modal-footer">
+        <p class="small text-muted m-0">Looking forward to connecting with you!</p>
       </div>
     </div>
-    
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <p class="pt-2" style="color: var(--brand-light-);">&copy; 2025 Wan Shariff. All rights reserved.</p>
+  </div>
+</div>
+
+  <div class="main-content container-fluid p-3">
+
+  <!-- Hero Section -->
+  <section class="hero-section position-relative text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto;">
+    <div class="hero-section-content container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h1 class="text-light mb-4">About Wan Shariff: Your Dedicated Digital Partner</h1>
+          <p class="text-light lead">
+            Making great web design and user experience accessible, one project at a time.
+          </p>
+        </div>
       </div>
-    </footer>
+    </div>
+  </section>
+
+  <!-- My Story Section -->
+  <main class="container my-5 p-4 text-dark">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h2 class="mb-4">My Story</h2>
+        <p class="lead mb-4">
+          I'm Wan Shariff, and I've built my freelance practice around a simple principle: making great web design and user experience accessible. Living and working in Malaysia, I saw a clear need for high-quality, personalized web solutions delivered without the overheads and complexities often associated with larger agencies.
+        </p>
+        <p class="mb-4">
+          My background is a mix of frontend development, a knack for data analysis, an eye for UI/UX design, and a focus on information architecture. This means I don't just build websites; I craft digital experiences that are not only visually engaging but also intelligently structured and truly functional.
+        </p>
+        <p class="mb-4">
+          I take the time to understand your unique goals, ensuring every project is a precise fit for your needs. It's about building trust, delivering results, and fostering a partnership that helps you thrive online.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- My Mission Section -->
+  <main class="container my-5 p-4 text-dark" style="background-color: var(--bg-secondary); border-radius: 16px;">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h2 class="mb-4">Empowering Your Digital Presence</h2>
+        <p class="lead mb-4">
+          My mission is straightforward: to help businesses and organizations establish an exceptional digital presence. I aim to bridge the gap between your innovative ideas and a tangible, effective online reality.
+        </p>
+        <p class="mb-0">
+          I'm committed to delivering tailored, high-quality, and cost-effective services that genuinely contribute to your success and build lasting relationships.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Philosophy & Approach Section -->
+  <main class="container my-5 p-4 text-dark">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h2 class="mb-4">Calm, Clear, and Focused on Your Success</h2>
+        <p class="lead mb-5">
+          My work is built on a foundation of clarity, collaboration, and a consistent pursuit of excellence.
+        </p>
+        
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="small-card success h-100">
+              <h5 class="mb-3">Direct Collaboration</h5>
+              <p>Your vision is paramount. I work directly with you, ensuring we're always on the same page and that the final product perfectly aligns with your objectives.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="small-card success h-100">
+              <h5 class="mb-3">Holistic Digital Thinking</h5>
+              <p>I look at the bigger picture. My expertise spans design, development, data insights, and user experience, ensuring your solution is comprehensive and well-rounded.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="small-card success h-100">
+              <h5 class="mb-3">Uncompromising Quality</h5>
+              <p>From the smallest detail in design to the cleanest line of code, I'm committed to delivering the highest standards. Your digital asset will be performant, secure, and ready for the future.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="small-card success h-100">
+              <h5 class="mb-3">Agile & Efficient</h5>
+              <p>As a freelancer, I offer the flexibility to adapt quickly to your needs, streamline processes, and deliver results efficiently, making your project journey smooth and stress-free.</p>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="small-card success h-100">
+              <h5 class="mb-3">Value-Driven</h5>
+              <p>I believe professional web design should be accessible. My pricing is structured to provide high value within a low-to-mid range, ensuring you get top-tier results without an exorbitant cost.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Skills & Expertise Section -->
+  <main class="container my-5 p-4 text-dark" style="background-color: var(--bg-secondary); border-radius: 16px;">
+    <div class="row">
+      <div class="col-lg-10 mx-auto text-center">
+        <h2 class="mb-4">My Expertise</h2>
+        <p class="lead mb-5">
+          A blend of technical skills and creative vision to bring your digital projects to life.
+        </p>
+        
+        <div class="row g-3 mb-4">
+          <div class="col-md-3 col-6">
+            <span class="label d-block p-3">Frontend Development</span>
+          </div>
+          <div class="col-md-3 col-6">
+            <span class="label d-block p-3">UI/UX Design</span>
+          </div>
+          <div class="col-md-3 col-6">
+            <span class="label d-block p-3">WordPress</span>
+          </div>
+          <div class="col-md-3 col-6">
+            <span class="label d-block p-3">Framer</span>
+          </div>
+          <div class="col-md-3 col-6">
+            <span class="label d-block p-3">Webflow</span>
+          </div>
+          <div class="col-md-3 col-6">
+            <span class="label d-block p-3">Figma</span>
+          </div>
+          <div class="col-md-3 col-6">
+            <span class="label d-block p-3">Information Architecture</span>
+          </div>
+          <div class="col-md-3 col-6">
+            <span class="label d-block p-3">Data Analysis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Call to Action Section -->
+  <main class="container my-5 p-4 text-center">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="mb-4">Ready to Work Together?</h2>
+        <p class="lead mb-4">
+          Whether you need a complete digital transformation or want to enhance your existing online presence, I'm here to help bring your vision to life.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+            Start Your Project
+          </button>
+          <a href="portfolio.html" class="btn btn-outline-primary">View My Work</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Contact Me Section -->
+  <main class="my-5 text-light p-4" id="contact">
+    <div class="container text-center">
+      <h2 class="mb-4">Let's Build Something Great Together</h2>
+      <p class="lead mb-4">Ready to transform your digital presence? Whether you have a clear vision or need some guidance on where to start, I'm here to help.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Get in Touch for a Free Consultation
+        </button>
+        <a href="mailto:syazwanshariff@gmail.com" class="btn btn-outline-light">Email Me Directly</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="pt-2" style="color: var(--brand-light);">&copy; 2025 Wan Shariff. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <p class="pt-2" style="color: var(--brand-light);">
+            <a href="mailto:syazwanshariff@gmail.com" class="text-decoration-none" style="color: var(--brand-light);">syazwanshariff@gmail.com</a> | 
+            <a href="https://linkedin.com/in/wanshariff" target="_blank" class="text-decoration-none" style="color: var(--brand-light);">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
   </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
-  <!-- Sidebar navigation script - updated to match project-details.html -->
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-  // Get all sections and navigation links
-  const sections = document.querySelectorAll("div[id]");
-  const navLinks = document.querySelectorAll('.sidebar-nav .nav-link');
-  
-  // Add active class styling directly in the script
-  const style = document.createElement('style');
-  style.innerHTML = `
-    .sidebar-nav .nav-link.active {
-      color: #ffffff;
-      font-weight: bold;
-      border-left: 3px solid #ffffff;
-      padding-left: 10px;
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    .sidebar-nav .nav-link {
-      transition: all 0.3s ease;
-      border-left: 3px solid transparent;
-      padding-left: 10px;
-    }
-  `;
-  document.head.appendChild(style);
-  
-  // Create an Intersection Observer
-  const observerOptions = {
-    root: null, // viewport is the root
-    rootMargin: '-20% 0px -70% 0px', // gives priority to elements near the top of the viewport
-    threshold: 0 // trigger as soon as any part of the element is visible
-  };
-  
-  // Track which section is currently highlighted
-  let currentActiveSection = null;
-  
-  // Callback function when intersection status changes
-  const observerCallback = (entries) => {
-    entries.forEach(entry => {
-      // Get the id of the section
-      const id = entry.target.getAttribute('id');
-      
-      // Find the corresponding navigation link
-      const link = document.querySelector(`.sidebar-nav .nav-link[href="#${id}"]`);
-      
-      if (entry.isIntersecting) {
-        // If this section is intersecting the viewport and is higher than the current active section
-        if (!currentActiveSection || entry.boundingClientRect.top < currentActiveSection.boundingClientRect.top) {
-          currentActiveSection = entry;
-          
-          // Remove active class from all links
-          navLinks.forEach(navLink => {
-            navLink.classList.remove('active');
-          });
-          
-          // Add active class to this section's link
-          if (link) {
-            link.classList.add('active');
-          }
-        }
-      }
-    });
-  };
-  
-  // Create the observer
-  const observer = new IntersectionObserver(observerCallback, observerOptions);
-  
-  // Observe all sections
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-  
-  // Add smooth scrolling to navigation links
-  navLinks.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        window.scrollTo({
-          top: targetSection.offsetTop - 100,
-          behavior: 'smooth'
-        });
-        
-        // Manually handle highlighting when clicking
-        navLinks.forEach(navLink => {
-          navLink.classList.remove('active');
-        });
-        this.classList.add('active');
-      }
-    });
-  });
-});
-  </script>
 </body>
 </html>

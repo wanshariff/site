@@ -1,15 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | Wan Shariff</title>
+  <title>Wan Shariff - Turning Ideas into Digital Realities</title>
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/yfr0hqd.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <!-- SEO -->
-  <meta name="description" content="Wan Shariff - Product Designer specializing in UI/UX design, branding, and digital experiences">
-</head>
+  <meta name="description" content="Wan Shariff - Your Partner for Web Design & UI/UX in Malaysia. WordPress, Framer, and Webflow development with a focus on quality and value.">
+  <meta name="keywords" content="web design, UI/UX design, WordPress development, Framer development, Webflow development, Malaysia web designer">
 </head>
 <body>
   <!-- NAVBAR -->
@@ -31,15 +32,17 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <!-- Center-aligned navigation -->
       <ul class="navbar-nav mx-auto py-0">
-        <li class="nav-item mb-0 px-2"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link active" href="index.html">HOME</a></li>
         <li class="nav-item mb-0 px-2"><a class="nav-link" href="portfolio.html">PORTFOLIO</a></li>
         <li class="nav-item mb-0 px-2"><a class="nav-link" href="about.html">ABOUT</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="#services">SERVICES</a></li>
+        <li class="nav-item mb-0 px-2"><a class="nav-link" href="#contact">CONTACT</a></li>
       </ul>
       
       <!-- Contact button on right side - now opens modal -->
       <div>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
-          Get In Touch
+          Let's Talk About Your Project
         </button>
       </div>
     </div>
@@ -98,21 +101,6 @@
               <a href="https://calendar.app.google/JMzsFwgJRxeSYvUq8" target="_blank" class="btn btn-sm btn-outline-secondary">Find a Time</a>
             </div>
           </div>
-          
-          <!-- Download Resume Option -->
-          <div class="contact-option">
-            <div class="contact-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
-                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
-              </svg>
-            </div>
-            <div class="contact-details">
-              <h5 class="mb-0">Download Resume</h5>
-              <p>Get a copy of my latest resume</p>
-              <a href="https://drive.google.com/file/d/1f8cYGzp3vLq5YbndSsxZ3q3bjUjjmKoG/view?usp=sharing" download class="btn btn-sm btn-outline-secondary">Download PDF</a>
-            </div>
-          </div>
         </div>
       </div>
       <div class="modal-footer">
@@ -125,140 +113,204 @@
   <div class="main-content container-fluid p-3">
 
   <!-- Hero Section -->
-  
   <section class="hero-section position-relative text-white" style="background-image: url('assets/images/cartographer.jpg'); background-repeat: repeat; background-size: auto;">
-    
     <div class="hero-section-content container">
       <div class="row">
-        <h1 class="text-light">Hello! I'm Wan!</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-8">
-          <p class="text-light col-lg-10" style="display: inline;">I'm a </p><div class="codinfox-changing-keywords fs-6" id="change">
-            <mark class="hidden">UI/UX Designer</mark><br/>
-            <mark class="hidden">Graphic Designer</mark><br/>
-            <mark class="hidden">Tech Enthusiast</mark><br/>
-            <mark class="hidden">Motion Designer</mark>
-    </div><p class="text-light col-lg-10" style="display: inline;"> with over ten years of professional experience from Agency, Consultancy, In-house and Freelance.</p> 
+        <div class="col-lg-8">
+          <h1 class="text-light mb-4">Turning Ideas into Digital Realities</h1>
+          <h2 class="text-light mb-4 fs-3 fw-light">Your Partner for Web Design & UI/UX in Malaysia</h2>
+          <p class="text-light lead mb-4">
+            I'm Wan Shariff, and I build websites. My approach is straightforward: I listen, I understand, and then I craft digital experiences that genuinely work for you. Whether it's a sleek WordPress site, a dynamic Framer page, or a robust Webflow build, I focus on delivering quality that fits your vision and your budget. No fuss, just effective solutions.
+          </p>
+          <div class="mt-4">
+            <button type="button" class="btn btn-primary me-3" data-bs-toggle="modal" data-bs-target="#contactModal">
+              Let's Talk About Your Project
+            </button>
+            <a href="#services" class="btn btn-outline-light">See What I Do</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio Case Studies -->
-  <main class="container my-3 p-4 text-light">
-      <h2 class="text-center mb-4">Case Studies</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card text-light" style="background-image: url(assets/images/kapitani-thumb-img.avif);">
-            <div class="card-body p-4">
-              <h4 id="card-title">Kapitani: Farm Management App UI Revamp</h4>
-              <a href="portfolio-kapitani.html" class="btn btn-primary">View Case Study</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card text-light" style="background-image: url(assets/images/aamove1-thumb-img.avif);">
-            <div class="card-body p-4">
-              <h4 class="card-title">Enhancing Hotel Content in AirAsia Move</h4>
-              <a href="project-details.html" class="btn btn-primary">View Case Study</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card text-light" style="background-image: url(assets/images/musawah-thumb-img.avif);">
-            <div class="card-body p-4">
-              <h4 class="card-title">Musawah Microsite Design & Content Restructure</h4>
-              <a href="project-details.html" class="btn btn-primary">View Case Study</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-  <!-- Gallery of Other Work -->
-  <main class="container my-3 p-4 text-light">
-      <h2 class="text-center mb-4">Design Shots</h2>
-      <div class="row">
-        <div class="col-md-3 mb-3">
-          <a href="assets/images/youthopia-thumb.jpg" class="lightbox-trigger" data-title="Youthopia" data-tags="Logo Design,Brand Guideline">
-            <div class="card-gallery text-light" style="background-image: url(assets/images/youthopia-thumb.jpg);">
-              <div class="card-body-gallery p-4">
-                <h4 class="card-title">Youthopia</h4>
-                <span class="label me-2 mb-2">Logo Design</span>
-                <span class="label me-2 mb-2">Brand Guideline</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 mb-3">
-          <a href="assets/images/raisuri-thumb.jpg" class="lightbox-trigger" data-title="Raisuri Football Club" data-tags="Logo Redesign">
-            <div class="card-gallery text-light" style="background-image: url(assets/images/raisuri-thumb.jpg);">
-              <div class="card-body-gallery p-4">
-                <h4 class="card-title">Raisuri Football Club</h4>
-                <span class="label me-2 mb-2">Logo Redesign</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 mb-3">
-          <a href="assets/images/unitar-thumb.jpg" class="lightbox-trigger" data-title="UNITAR" data-tags="Brand Revamp">
-            <div class="card-gallery text-light" style="background-image: url(assets/images/unitar-thumb.jpg);">
-              <div class="card-body-gallery p-4">
-                <h4 class="card-title">UNITAR</h4>
-                <span class="label me-2 mb-2">Brand Revamp</span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-3 mb-3">
-          <a href="assets/images/justified-thumb-img.jpg" class="lightbox-trigger" data-title="Justified Juice Bar" data-tags="Logo Design">
-            <div class="card-gallery text-light" style="background-image: url(assets/images/justified-thumb-img.jpg);">
-              <div class="card-body-gallery p-4">
-                <h4 class="card-title">Justified Juice Bar</h4>
-                <span class="label me-2 mb-2">Logo Design</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </main>
-
-    <!-- Add the lightbox container if it's not already in your index.html -->
-    <div id="lightbox" class="lightbox-overlay" style="display: none;">
-      <div class="lightbox-content">
-        <div class="lightbox-image-container">
-          <img id="lightbox-image" src="" alt="Lightbox Image">
-          <div class="zoom-overlay">
-            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
-            <span class="zoom-text">Click on image to zoom in for details</span>
-          </div>
-        </div>
-        <div class="lightbox-details">
-          <span class="close-icon">&times;</span>
-          <h4 id="lightbox-title"></h4>
-          <ul id="lightbox-tags"></ul>
-        </div>
+  <!-- Why Work With Me Section -->
+  <main class="container my-5 p-4 text-dark">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="mb-4">A Calm Hand in the Digital Space</h2>
+        <p class="lead mb-5">
+          Navigating the digital world can feel a bit chaotic. My aim is to make it simple and effective for you. I bring a blend of frontend development, data insight, UI/UX design, and information architecture to the table, ensuring your online presence isn't just pretty, but smart and functional.
+        </p>
       </div>
     </div>
-
-      <!-- Contact Me Section -->
-      <main class="my-2 text-light p-4" id="contact">
-        <div class="container text-center">
-          <h2 class="mb-4">Contact Me</h2>
-          <p>Have a project in mind or want to collaborate? Feel free to reach out!</p>
-          <a href="mailto:your.email@example.com" class="btn btn-primary">Email Me</a>
-        </div>
-      </main>
     
-      <!-- Footer -->
-      <footer>
-        <div class="container">
-          <p class="pt-2" style="color: var(--brand-light-);">&copy; 2025 Wan Shariff. All rights reserved.</p>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="small-card h-100">
+          <h5 class="mb-3">Direct & Clear</h5>
+          <p>You work directly with me. No layers, just clear communication and focused effort.</p>
         </div>
-      </footer>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="small-card h-100">
+          <h5 class="mb-3">Thoughtful Solutions</h5>
+          <p>I don't just build; I think through how your digital presence can best serve your goals.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="small-card h-100">
+          <h5 class="mb-3">Quality First</h5>
+          <p>Every project gets my full attention, ensuring a polished, performant, and reliable outcome.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="small-card h-100">
+          <h5 class="mb-3">Fair Value</h5>
+          <p>I offer professional-grade work at a low to mid-range price point, because good design shouldn't break the bank.</p>
+        </div>
+      </div>
     </div>
+    
+    <div class="text-center mt-5">
+      <a href="about.html" class="btn btn-primary">More About My Approach</a>
+    </div>
+  </main>
 
-  
+  <!-- Core Services Section -->
+  <main class="container my-5 p-4 text-dark" id="services">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center mb-5">
+        <h2 class="mb-4">What I Can Do For You</h2>
+        <p class="lead">From a simple online presence to a complex digital platform, I'm here to help.</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="small-card success h-100">
+          <h5 class="mb-3">WordPress Development</h5>
+          <p class="mb-3">Building reliable, scalable sites that you can easily manage.</p>
+          <span class="label">CMS</span>
+          <span class="label">E-commerce</span>
+          <span class="label">Custom Themes</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="small-card success h-100">
+          <h5 class="mb-3">Framer Development</h5>
+          <p class="mb-3">Crafting fast, visually striking marketing sites that stand out.</p>
+          <span class="label">Landing Pages</span>
+          <span class="label">Animations</span>
+          <span class="label">MVPs</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="small-card success h-100">
+          <h5 class="mb-3">Webflow Development</h5>
+          <p class="mb-3">Designing custom, responsive websites with powerful content management.</p>
+          <span class="label">Custom Design</span>
+          <span class="label">CMS</span>
+          <span class="label">Responsive</span>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="small-card success h-100">
+          <h5 class="mb-3">UI/UX Design</h5>
+          <p class="mb-3">Creating intuitive and enjoyable experiences for your users.</p>
+          <span class="label">User Research</span>
+          <span class="label">Wireframing</span>
+          <span class="label">Prototyping</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="services.html" class="btn btn-primary">See All Services</a>
+    </div>
+  </main>
+
+  <!-- Recent Projects Section -->
+  <main class="container my-5 p-4 text-light">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center mb-5">
+        <h2 class="mb-4">A Glimpse of My Work</h2>
+        <p class="lead">Here are a few projects I've recently completed. They show the range of what I can do.</p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card text-light" style="background-image: url(assets/images/sa-global-thumb.jpg);">
+          <div class="card-body p-4">
+            <h4 class="card-title">SA Global Logistics Web Design</h4>
+            <p class="mb-3">WordPress Development</p>
+            <span class="label">WordPress</span>
+            <span class="label">Corporate</span>
+            <a href="portfolio.html" class="btn btn-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-light" style="background-image: url(assets/images/musawah-thumb-img.avif);">
+          <div class="card-body p-4">
+            <h4 class="card-title">Musawah: Campaign for Justice</h4>
+            <p class="mb-3">Figma Design</p>
+            <span class="label">UI/UX</span>
+            <span class="label">Advocacy</span>
+            <a href="portfolio.html" class="btn btn-primary mt-3">View Project</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-light" style="background-image: url(assets/images/kapitani-thumb-img.avif);">
+          <div class="card-body p-4">
+            <h4 class="card-title">Kapitani App Revamp</h4>
+            <p class="mb-3">Figma Design & Design System</p>
+            <span class="label">App Design</span>
+            <span class="label">Design System</span>
+            <a href="portfolio-kapitani.html" class="btn btn-primary mt-3">View Case Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <a href="portfolio.html" class="btn btn-primary">View My Full Portfolio</a>
+    </div>
+  </main>
+
+  <!-- Contact Me Section -->
+  <main class="my-5 text-light p-4" id="contact">
+    <div class="container text-center">
+      <h2 class="mb-4">Let's Build Something Great Together</h2>
+      <p class="lead mb-4">Ready to transform your digital presence? Whether you have a clear vision or need some guidance on where to start, I'm here to help.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">
+          Get in Touch for a Free Consultation
+        </button>
+        <a href="mailto:syazwanshariff@gmail.com" class="btn btn-outline-light">Email Me Directly</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="pt-2" style="color: var(--brand-light);">&copy; 2025 Wan Shariff. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-end">
+          <p class="pt-2" style="color: var(--brand-light);">
+            <a href="mailto:syazwanshariff@gmail.com" class="text-decoration-none" style="color: var(--brand-light);">syazwanshariff@gmail.com</a> | 
+            <a href="https://linkedin.com/in/wanshariff" target="_blank" class="text-decoration-none" style="color: var(--brand-light);">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </div>
+
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/scripts.js"></script>
